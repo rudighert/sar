@@ -1,5 +1,25 @@
 $gray_box: #efefef;
 $text_blue: #0099cf;
+$text_gray: #686968;
+$bg_blue: #0099cf;
+
+.title_box_blue, .title_box_gray{
+  font-size: 14px;
+  padding: 3px;
+  display: inline-block;
+  span{
+    font-weight: bold;
+  }
+}
+.title_box_blue{
+  color: white;
+  background-color: $bg_blue;
+}
+.title_box_gray{
+  color: $text_blue;
+  background-color: $gray_box;
+}
+
 #header{
   background-color: #eaeaea;
   color: $text_blue;
@@ -17,6 +37,11 @@ $text_blue: #0099cf;
   }
 
 }
+#menu_logged{
+  background-color: $bg_blue;
+  color: white;
+  margin-bottom: 50px;
+}
 
 .box_login{
   margin-top: 100px;
@@ -28,5 +53,70 @@ $text_blue: #0099cf;
   }
   .buttons{
     text-align: right;
+  }
+}
+
+input.cases_search{
+  max-width: 40%;
+  float: right;
+  padding-left: 60px!important;
+}
+
+#paginate_table{
+
+  ul{
+    li{
+      display: inline-block;
+      vertical-align: bottom;
+      zoom: 1;
+      color: $text_gray;
+      padding: 1px 5px;
+      &.select{
+        color: white;
+        background-color: $bg_blue;
+        border-radius: 2px;
+      }
+    }
+  }
+}
+
+#menu_form{
+  font-size: 0;
+  background-color: $gray_box;
+  width: 100%;
+  display: table;
+  margin: 0;
+  margin-bottom: 40px;
+  li{
+    font-size: 12px;
+    margin: 0;
+    width: 11%;
+    display: inline-block;
+    vertical-align: middle;
+    color: $text_blue;
+    display: table-cell;
+    padding: 0 10px;
+    text-align: center;
+    border-right: 3px solid white;
+    &.select{
+      color: white;
+      background-color: $bg_blue;
+    }
+    &:last-child{
+      border-right: none;
+    }
+  }
+}
+
+.forms{
+  margin-top: 40px!important;
+
+  .step{
+    color: $text_blue;
+    font-size: 20px;
+    padding: 10px 0;
+  }
+  label{
+    padding: 10px 0;
   }
 }

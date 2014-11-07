@@ -12,11 +12,20 @@
   display: inline-block;
   zoom: 1;
   vertical-align: middle;
+  margin: 0!important;
+  padding: 0;
 }
 
 .no_float{
   float: none!important;
   @extend .inline;
+}
+
+.right{
+  text-align: right;
+}
+.left{
+  text-align: left;
 }
 
 

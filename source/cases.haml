@@ -1,0 +1,37 @@
+=partial 'partials/menu_logged'
+
+.row
+  .small-12.large-12.columns.right
+    %form{name: "login", action: "#", method: "post"}
+      %input.cases_search{type: "text", name: "cases_search", placeholder: "Búsqueda de casos"}
+
+.row
+  .small-12.large-12.columns
+    %table
+      %thead
+        %tr
+          %th{:width => "25%"} Table Header
+          %th{:width => "25%"} Table Header
+          %th{:width => "25%"} Table Header
+          %th{:width => "25%"} Table Header
+      %tbody
+        %tr
+          %td Content Goes Here
+          %td This is longer content Donec id elit non mi porta gravida at eget metus.
+          %td Content Goes Here
+          %td Content Goes Here
+        %tr
+          %td Content Goes Here
+          %td This is longer Content Goes Here Donec id elit non mi porta gravida at eget metus.
+          %td Content Goes Here
+          %td Content Goes Here
+        %tr
+          %td Content Goes Here
+          %td This is longer Content Goes Here Donec id elit non mi porta gravida at eget metus.
+          %td Content Goes Here
+          %td Content Goes Here
+
+  .small-12.large-12.columns.right
+    %button Ingresar Caso
+
+  =partial 'partials/paginate_table'

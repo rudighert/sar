@@ -1,0 +1,6 @@
+#paginate_table
+  %ul
+    %li.next_page="<<"
+    -(1..10).each do |i|
+      %li{class: i==1 ? 'select' : ''}=i
+    %li.prev_page=">>"
