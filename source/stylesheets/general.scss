@@ -1,0 +1,41 @@
+@charset "utf-8";
+
+.va{
+  height: 100%;
+  margin-left: -4px;
+  display: inline-block;
+  zoom: 1;
+  vertical-align: middle;
+}
+
+.inline{
+  display: inline-block;
+  zoom: 1;
+  vertical-align: middle;
+}
+
+.no_float{
+  float: none!important;
+  @extend .inline;
+}
+
+
+$height_footer: 5px;
+#wrapper{
+  min-height: 100%;
+  &:after{
+    content: "";
+    display: block;
+  }
+}
+footer{
+  position: static;
+  width: 100%;
+  bottom: 0;
+  .line_footer{
+    width: 200px;
+    margin: 0 auto;
+    background-color: blue;
+    height: 5px;
+  }
+}

@@ -1,0 +1,15 @@
+.row
+  .small-6.small-centered.columns
+    .box_login
+      .header_log
+        .arrow="--->"
+        %h2 Login
+        .icon_login
+      %form{name: "login"}
+        %label Usuario
+        %input{type: "text", name: "username", placeholder: "Nombre de usuario"}
+
+        %label Contraseña
+        %input{type: "password", name: "password", placeholder: "........."}
+        .buttons
+          %button{type: "submit"} Ingresar

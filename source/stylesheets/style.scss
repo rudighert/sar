@@ -1,0 +1,32 @@
+$gray_box: #efefef;
+$text_blue: #0099cf;
+#header{
+  background-color: #eaeaea;
+  color: $text_blue;
+
+  h1{
+    font-size: 20px;
+    span{
+      font-weight: bold;
+    }
+  }
+
+  .header_logo{
+    max-width: 250px;
+    width: 100%;
+  }
+
+}
+
+.box_login{
+  margin-top: 100px;
+  background-color: $gray_box;
+  padding: 10px 70px;
+  color: $text_blue;
+  label, h2{
+    color: $text_blue;
+  }
+  .buttons{
+    text-align: right;
+  }
+}
