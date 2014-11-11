@@ -1,5 +1,10 @@
 @charset "utf-8";
-
+@import "compass";
+.icons-sprite{@include inline-block;}
+$icon-layout:smart;
+$icons-sprite-dimensions: true;
+@import "icons/*.png";
+@include all-icons-sprites;
 .va{
   height: 100%;
   margin-left: -4px;
@@ -9,11 +14,9 @@
 }
 
 .inline{
-  display: inline-block;
-  zoom: 1;
-  vertical-align: middle;
   margin: 0!important;
   padding: 0;
+  @include inline-block;
 }
 
 .no_float{

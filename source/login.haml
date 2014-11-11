@@ -1,10 +1,12 @@
 .row
-  .small-6.small-centered.columns
+  .small-12.large-5.columns
     .box_login
       .header_log
-        .arrow="--->"
-        %h2 Login
+        .arrow.icons-sprite.icons-flecha_login
+        .text
+          Login
         .icon_login
+          .icons-sprite.icons-login
       %form{name: "login", action: "#", method: "post"}
         %label Usuario
         %input{type: "text", name: "username", placeholder: "Nombre de usuario"}
@@ -13,3 +15,4 @@
         %input{type: "password", name: "password", placeholder: "........."}
         .buttons
           %button{type: "submit"} Ingresar
+  .small-12.large-8.columns

@@ -1,5 +1,6 @@
+@import "compass";
 $gray_box: #efefef;
-$text_blue: #0099cf;
+$text_blue: #0099ce;
 $text_gray: #686968;
 $bg_blue: #0099cf;
 
@@ -23,6 +24,8 @@ $bg_blue: #0099cf;
 #header{
   background-color: #eaeaea;
   color: $text_blue;
+  padding: 15px;
+  white-space: nowrap;
 
   h1{
     font-size: 20px;
@@ -31,9 +34,16 @@ $bg_blue: #0099cf;
     }
   }
 
-  .header_logo{
-    max-width: 250px;
-    width: 100%;
+  .logo{
+    @include inline-block(bottom);
+    &.sar{
+      text-align: left;
+      width: 65%;
+    }
+    &.corp{
+      width: 35%;
+      text-align: right;
+    }
   }
 
 }
@@ -48,11 +58,34 @@ $bg_blue: #0099cf;
   background-color: $gray_box;
   padding: 10px 70px;
   color: $text_blue;
+  position: relative;
   label, h2{
     color: $text_blue;
+    font-size: 16px;
   }
   .buttons{
     text-align: right;
+  }
+  .header_log{
+    white-space: nowrap;
+    .arrow{
+      position: absolute;
+      left: 0;
+      top: 14px;
+      color: white;
+      font-size: 25px;
+    }
+    .text, .icon_login{
+      @include inline-block(top);
+    }
+    .text{
+      font-size: 25px;
+      width: 65%;
+    }
+    .icon_login{
+      text-align: right;
+      width: 35%;
+    }
   }
 }
 
