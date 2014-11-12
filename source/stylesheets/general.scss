@@ -1,10 +1,11 @@
 @charset "utf-8";
 @import "compass";
-.icons-sprite{@include inline-block;}
-$icon-layout:smart;
-$icons-sprite-dimensions: true;
-@import "icons/*.png";
-@include all-icons-sprites;
+
+
+h1, h2, h3, h4, label, div, button, table, th{
+  font-family:  "Gob", "Helvetica Neue", Helvetica, 'lucida grande', tahoma, verdana, arial, sans-serif;
+}
+
 .va{
   height: 100%;
   margin-left: -4px;

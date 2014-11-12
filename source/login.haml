@@ -1,18 +1,21 @@
-.row
-  .small-12.large-5.columns
-    .box_login
-      .header_log
-        .arrow.icons-sprite.icons-flecha_login
-        .text
-          Login
-        .icon_login
-          .icons-sprite.icons-login
-      %form{name: "login", action: "#", method: "post"}
-        %label Usuario
-        %input{type: "text", name: "username", placeholder: "Nombre de usuario"}
+%section#login
+  .row
+    .small-12.large-5.columns
+      .box_login
+        .header_log
+          .arrow.icons-sprite.icons-flecha_login
+          .text
+            Login
+          .icon_login
+            .icons-sprite.icons-login
+        %form{name: "login", action: "#", method: "post"}
+          %label Usuario
+          %input{type: "text", name: "username", placeholder: "Nombre de usuario"}
 
-        %label Contraseña
-        %input{type: "password", name: "password", placeholder: "........."}
-        .buttons
-          %button{type: "submit"} Ingresar
-  .small-12.large-8.columns
+          %label Contraseña
+          %input{type: "password", name: "password", placeholder: "........."}
+          .buttons
+            %button{type: "submit"} Ingresar
+    .small-12.large-7.columns
+      .banner_box
+      .banner_box
