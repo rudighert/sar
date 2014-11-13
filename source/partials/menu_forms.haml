@@ -1,5 +1,7 @@
 -menu = ["SAR", "Citación", "Detalle del Caso", "Intervanción Breve", "Valoración Integral", "Cerrar", "Intervención Especial", "Derivar", "Egreso"]
 
+-select = "SAR"
+
 %ul#menu_form
   -menu.each do |m|
     %li{class: m==select ? "select" : ''}=m
