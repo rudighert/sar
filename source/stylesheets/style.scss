@@ -190,6 +190,7 @@ section#login{
 }
 
 .general_table{
+  margin: 45px 0;
   .sort{
     position: relative;
     padding-right: 20px;
@@ -274,4 +275,31 @@ section#login{
   .border_right{
     border-right: 1px solid black;
   }
+}
+
+.box_gray{
+  background-color: #efefef;
+  .text_info{
+    margin: 20px 10px;
+  }
+  .blue{
+    color: $text_blue;
+  }
+}
+
+.table_asistencia{
+  tbody tr td{
+    text-align: left;
+    padding-left: 30px;
+  }
+}
+
+.nombre_objetivo, .detalle_objetivo{
+  margin: 2px;
+}
+.nombre_objetivo{
+  background-color: #efefef;
+}
+.detalle_objetivo{
+  background-color: #efefef;
 }
