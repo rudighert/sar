@@ -180,6 +180,10 @@ section#login{
     font-size: 20px;
     padding: 10px 0;
   }
+  .subtitle{
+    color: $text_blue;
+    font-size: 14px;
+  }
   label{
     padding: 10px 0;
   }
@@ -249,4 +253,25 @@ section#login{
 
 .blue_line_dot{
   border-top: 2px dashed $text_blue;
+}
+
+.multi_items{
+  .top_radios{
+    white-space: nowrap;
+    font-size: 0;
+    .block{
+      width: 50%;
+      text-align: center;
+      border-top: 1px solid black;
+      @include inline-block;
+    }
+
+  }
+  .title_top{
+    font-size: 14px;
+    padding: 10px 10px;
+  }
+  .border_right{
+    border-right: 1px solid black;
+  }
 }

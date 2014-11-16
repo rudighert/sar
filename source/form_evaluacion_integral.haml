@@ -1,0 +1,573 @@
+=partial 'partials/menu_logged'
+
+.row
+  =partial 'partials/menu_forms', locals: {select: "Valoración Integral"}
+
+.row
+  .small-4.large-4.columns
+    .title_box_blue FORMULATIO DE INGRESO A SAR
+
+  .small-3.large-3.columns.right
+    .title_box_gray
+      %span Fecha:
+      07/11/2014
+
+  .small-5.large-5.columns.right
+    .title_box_gray
+      %span Nº de Expediente:
+      123424
+
+.row.forms
+  .step Valoración Social
+  .subtitle Situación personal y familiar:
+
+  / Line Items
+  .small-12.large-12.columns
+    %input{checked: true, name: "tipo_familia", type: "radio", :value => "mono_parental"}
+    %label Mono Paramental
+  .small-12.large-12.columns
+    %input{checked: false, name: "tipo_familia", type: "radio", :value => "biparamental"}
+    %label Biparamental
+  .small-12.large-12.columns
+    %input{checked: false, name: "tipo_familia", type: "radio", :value => "multiparamental"}
+    %label Multiparamental
+  .small-12.large-12.columns
+    %input{checked: false, name: "tipo_familia", type: "radio", :value => "reensamblada"}
+    %label Reensamblada
+  .small-12.large-12.columns
+    %input{checked: false, name: "tipo_familia", type: "radio", :value => "extendida"}
+    %label Extendida
+
+
+
+  .subtitle Situación previsional:
+
+  / Line Items
+  .small-12.large-6.columns
+    %label Salud:
+    .block_radio
+      %input{checked: true, name: "salud", type: "radio", :value => "fonasa"}
+      %label Fonasa
+    .block_radio
+      %input{checked: false, name: "salud", type: "radio", :value => "Isapre"}
+      %label Isapre
+    .block_radio
+      %input{checked: false, name: "salud", type: "radio", :value => "sin_prevision"}
+      %label Sin Previsión
+    .block_radio
+      %input{checked: false, name: "salud", type: "radio", :value => "Otro"}
+      %label Otro
+    %input{type: "text", name: "text_otro_salud"}
+
+
+
+  .small-12.large-6.columns
+    %label Previsión
+    .block_radio
+      %input{checked: true, name: "prevision", type: "radio", :value => "afp"}
+      %label AFP
+    .block_radio
+      %input{checked: false, name: "prevision", type: "radio", :value => "INP"}
+      %label INP
+    .block_radio
+      %input{checked: false, name: "prevision", type: "radio", :value => "sin_prevision"}
+      %label Sin Previsión
+    .block_radio
+      %input{checked: false, name: "prevision", type: "radio", :value => "Otro"}
+      %label Otro
+    %input{type: "text", name: "text_otro_prevision"}
+
+
+  .subtitle Situación habitacional:
+
+  / Line Items
+  .small-12.large-6.columns
+    %label Sitación Ocupacional:
+    %select{name: "tipo_vivienda"}
+      -(1..5).each do |i|
+        %option Tipo Vivienda
+
+  .small-12.large-6.columns
+    %label Tenencia:
+    %select{name: "tenencia_vivienda"}
+      -(1..5).each do |i|
+        %option Tenencia
+
+
+
+  .subtitle Antecedentes de Salud:
+
+  / Line Items
+  .small-12.large-12.columns
+    .block_radio
+      %input{checked: true, name: "atenecedentes_salud", type: "radio", :value => "si"}
+      %label Si
+    .block_radio
+      %input{checked: false, name: "atenecedentes_salud", type: "radio", :value => "no"}
+      %label No
+  .small-12.large-6.columns
+    %label Enfermedad(es) crónica(s):
+    %input{type: "text", name: "enfermedad_cronica"}
+
+  .small-12.large-6.columns
+    %label Discapacidad fisica y/o mental:
+    %input{type: "text", name: "discapacidad_fisica"}
+
+  .small-12.large-6.columns
+    %input{checked: false, name: "utilizacion_famacos", type: "radio", :value => "si"}
+    %label Utilización de fármacos
+    %textarea{rows: 6, name: "utilizacion_famacos_detalle"} text...
+
+  .small-12.large-6.columns
+    %label Lugar donde se controla:
+    %textarea{rows: 6, name: "utilizacion_famacos_detalle"} text...
+
+
+
+.row.forms
+  .subtitle Composición Familiar:
+
+  / Line Items
+  .small-12.large-12.columns
+    %table.general_table
+      %thead
+        %tr
+          %th{:width => "16%"} Nombre
+          %th{:width => "14%"} Cedula de identidad
+          %th{:width => "14%"} Fecha de Nacimiento
+          %th{:width => "14%"} Sexo
+          %th{:width => "14%"} Parentesco
+          %th{:width => "14%"} Estado Civil
+          %th{:width => "14%"} Actividad
+      %tbody
+        %tr
+          %td ...
+          %td ...
+          %td
+            .block_input_icon
+              .icon.icons-sprite.icons-date_az
+              %input.calendar{type: "text", name: "composicion_familiar_fecha"}
+          %td
+            %select{name: "composicion_familiar_sexo"}
+              %option Sexo
+              %option Hombre
+              %option Mujer
+          %td
+            %select{name: "composicion_familiar_parentesco"}
+              %option Parentesco
+          %td
+            %select{name: "composicion_familiar_estado_civil"}
+              %option Estado Civil
+          %td ...
+
+
+
+  / Line Items
+  .subtitle Genograma:
+  .small-12.large-12.columns
+    .row
+      .small-10.columns
+        %input{:placeholder => "seleccionar archivo", :type => "text", name: "file_genograma"}
+      .small-2.columns
+        %a.button.postfix{:href => "#"} Examinar
+
+
+  / Line Items
+  .subtitle Redes de apoyo (Familiar, instuticional y no institucionales)
+  .small-12.large-12.columns
+    %textarea{rows: 6, name: "text_red_apoyo"} text...
+    .row
+      .small-10.columns
+        %input{:placeholder => "seleccionar archivo", :type => "text", name: "file_red_apoyo"}
+      .small-2.columns
+        %a.button.postfix{:href => "#"} Examinar
+
+.row.forms
+  .step Valoración Psicológica
+  .subtitle Estado anterior (antecedentes relevantes como tratamiento, diagnósticos anteriores)
+
+  .small-12.large-12.columns
+    .row.multi_items
+      .small-4.large-4.columns
+        %p
+      .small-4.large-4.columns.border_right.top_radios
+        .title_top Diagnóstico Previo
+        .block
+          %input{checked: false, name: "diagnostico_previo", type: "radio", :value => "si"}
+          %label Si
+        .block
+          %input{checked: false, name: "diagnostico_previo", type: "radio", :value => "no"}
+          %label No
+      .small-4.large-4.columns.top_radios
+        .title_top Tratamiento
+        .block
+          %input{checked: false, name: "tratamiento", type: "radio", :value => "si"}
+          %label Si
+        .block
+          %input{checked: false, name: "tratamiento", type: "radio", :value => "no"}
+          %label No
+
+
+
+
+      / Block Multi Items
+      .small-4.large-4.columns
+        %input{type: "checkbox", name: "val_psico_trastorno_check", value:"true", checked: true}
+        %label Trastornos del estado de ánimo
+      .small-4.large-4.columns.border_right
+        .row.collapse
+          .small-6.large-6.columns
+            %input{checked: false, name: "val_psico_trastorno_animo_diag_radio", type: "radio", :value => "si"}
+            %label Si
+            %input{checked: false, name: "val_psico_trastorno_animo_diag_radio", type: "radio", :value => "no"}
+            %label No
+          .small-6.large-6.columns
+            %input{type: "text", name: "val_psico_trastorno_animo_diag_text"}
+      .small-4.large-4.columns
+        .row.collapse
+          .small-6.large-6.columns
+            %input{checked: false, name: "val_psico_trastorno_animo_trat_radio", type: "radio", :value => "si"}
+            %label Si
+            %input{checked: false, name: "val_psico_trastorno_animo_trat_radio", type: "radio", :value => "no"}
+            %label No
+          .small-6.large-6.columns
+            %input{type: "text", name: "val_psico_trastorno_animo_trat_text"}
+
+
+      / Block Multi Items
+      .small-4.large-4.columns
+        %input{type: "checkbox", name: "val_psico_trastorno_ansioso_check", value:"true", checked: true}
+        %label Trastornos ansiosos
+      .small-4.large-4.columns.border_right
+        .row.collapse
+          .small-6.large-6.columns
+            %input{checked: false, name: "val_psico_trastorno_ansioso_diag_radio", type: "radio", :value => "si"}
+            %label Si
+            %input{checked: false, name: "val_psico_trastorno_ansioso_diag_radio", type: "radio", :value => "no"}
+            %label No
+          .small-6.large-6.columns
+            %input{type: "text", name: "val_psico_trastorno_ansioso_diag_text"}
+      .small-4.large-4.columns
+        .row.collapse
+          .small-6.large-6.columns
+            %input{checked: false, name: "val_psico_trastorno_ansioso_trat_radio", type: "radio", :value => "si"}
+            %label Si
+            %input{checked: false, name: "val_psico_trastorno_ansioso_trat_radio", type: "radio", :value => "no"}
+            %label No
+          .small-6.large-6.columns
+            %input{type: "text", name: "val_psico_trastorno_ansioso_trat_text"}
+
+
+
+      / Block Multi Items
+      .small-4.large-4.columns
+        %input{type: "checkbox", name: "val_psico_trastorno_psicotico_check", value:"true", checked: true}
+        %label Trastornos psicótico
+      .small-4.large-4.columns.border_right
+        .row.collapse
+          .small-6.large-6.columns
+            %input{checked: false, name: "val_psico_trastorno_psicotico_diag_radio", type: "radio", :value => "si"}
+            %label Si
+            %input{checked: false, name: "val_psico_trastorno_psicotico_diag_radio", type: "radio", :value => "no"}
+            %label No
+          .small-6.large-6.columns
+            %input{type: "text", name: "val_psico_trastorno_psicotico_diag_text"}
+      .small-4.large-4.columns
+        .row.collapse
+          .small-6.large-6.columns
+            %input{checked: false, name: "val_psico_trastorno_psicotico_trat_radio", type: "radio", :value => "si"}
+            %label Si
+            %input{checked: false, name: "val_psico_trastorno_psicotico_trat_radio", type: "radio", :value => "no"}
+            %label No
+          .small-6.large-6.columns
+            %input{type: "text", name: "val_psico_trastorno_psicotico_trat_text"}
+
+
+      / Block Multi Items
+      .small-4.large-4.columns
+        %input{type: "checkbox", name: "val_psico_trastorno_personalidad_check", value:"true", checked: true}
+        %label Trastornos de personalidad
+      .small-4.large-4.columns.border_right
+        .row.collapse
+          .small-6.large-6.columns
+            %input{checked: false, name: "val_psico_trastorno_personalidad_diag_radio", type: "radio", :value => "si"}
+            %label Si
+            %input{checked: false, name: "val_psico_trastorno_personalidad_diag_radio", type: "radio", :value => "no"}
+            %label No
+          .small-6.large-6.columns
+            %input{type: "text", name: "val_psico_trastorno_personalidad_diag_text"}
+      .small-4.large-4.columns
+        .row.collapse
+          .small-6.large-6.columns
+            %input{checked: false, name: "val_psico_trastorno_personalidad_trat_radio", type: "radio", :value => "si"}
+            %label Si
+            %input{checked: false, name: "val_psico_trastorno_personalidad_trat_radio", type: "radio", :value => "no"}
+            %label No
+          .small-6.large-6.columns
+            %input{type: "text", name: "val_psico_trastorno_personalidad_trat_text"}
+
+
+      / Block Multi Items
+      .small-4.large-4.columns
+        %input{type: "checkbox", name: "val_psico_trastorno_desarrollo_check", value:"true", checked: true}
+        %label Trastornos del desarollo
+      .small-4.large-4.columns.border_right
+        .row.collapse
+          .small-6.large-6.columns
+            %input{checked: false, name: "val_psico_trastorno_desarrollo_diag_radio", type: "radio", :value => "si"}
+            %label Si
+            %input{checked: false, name: "val_psico_trastorno_desarrollo_diag_radio", type: "radio", :value => "no"}
+            %label No
+          .small-6.large-6.columns
+            %input{type: "text", name: "val_psico_trastorno_desarrollo_diag_text"}
+      .small-4.large-4.columns
+        .row.collapse
+          .small-6.large-6.columns
+            %input{checked: false, name: "val_psico_trastorno_desarrollo_trat_radio", type: "radio", :value => "si"}
+            %label Si
+            %input{checked: false, name: "val_psico_trastorno_desarrollo_trat_radio", type: "radio", :value => "no"}
+            %label No
+          .small-6.large-6.columns
+            %input{type: "text", name: "val_psico_trastorno_desarrollo_trat_text"}
+
+      / Block Multi Items
+      .small-4.large-4.columns
+        .row
+          .small-5.columns
+            %input{type: "checkbox", name: "val_psico_trastorno_otras_check", value:"true", checked: true}
+            %label Otras
+          .small-6.columns
+            %input{type: "text", name: "val_psico_trastorno_otras_trat_check_text"}
+
+      .small-4.large-4.columns.border_right
+        .row.collapse
+          .small-6.large-6.columns
+            %input{checked: false, name: "val_psico_trastorno_otras_diag_radio", type: "radio", :value => "si"}
+            %label Si
+            %input{checked: false, name: "val_psico_trastorno_otras_diag_radio", type: "radio", :value => "no"}
+            %label No
+          .small-6.large-6.columns
+            %input{type: "text", name: "val_psico_trastorno_otras_diag_text"}
+      .small-4.large-4.columns
+        .row.collapse
+          .small-6.large-6.columns
+            %input{checked: false, name: "val_psico_trastorno_otras_trat_radio", type: "radio", :value => "si"}
+            %label Si
+            %input{checked: false, name: "val_psico_trastorno_otras_trat_radio", type: "radio", :value => "no"}
+            %label No
+          .small-6.large-6.columns
+            %input{type: "text", name: "val_psico_trastorno_otras_trat_text"}
+
+.row.forms
+  .subtitle Sintomología Actual
+
+  / Line Items
+  .small-6.columns
+    %input{type: "checkbox", name: "sintomas_ansiosos", value:"true", checked: true}
+    %label Sítnomas ansiosos
+  .small-6.columns
+    %input{type: "checkbox", name: "sintomas_disociativos", value:"true", checked: true}
+    %label Sítnomas disociativos
+
+  / Line Items
+  .small-6.columns
+    %input{type: "checkbox", name: "sintomas_depresivos", value:"true", checked: true}
+    %label Sítnomas depresivos
+  .small-6.columns
+    %input{type: "checkbox", name: "sintomas_psicoticos", value:"true", checked: true}
+    %label Sítnomas psicóticos
+
+
+  / Line Items
+  .small-6.columns
+    %input{type: "checkbox", name: "sintomas_conductales", value:"true", checked: true}
+    %label Sítnomas conductales
+  .small-6.columns
+    %input{type: "checkbox", name: "sintomas_psicosexual", value:"true", checked: true}
+    %label Sítnomas psicosexual
+
+
+  / Line Items
+  .small-6.columns
+    %input{type: "checkbox", name: "sintomas_somotamorfos", value:"true", checked: true}
+    %label Sítnomas somatomorfos
+  .small-6.columns
+    .row
+      .small-5.columns
+        %input{type: "checkbox", name: "sintomas_otros", value:"true", checked: true}
+        %label Otros síntomas
+      .small-6.columns
+        %input{type: "text", name: "sintomas_otros_text"}
+
+
+  / Line Items
+  .small-12.large-12.columns
+    %label Hipótesis Diagnóstica
+    %textarea{rows: 6, name: "text_red_apoyo"} text...
+
+.row.forms
+  .step Valoración Jurídica
+  .subtitle Deligencias Relizadas por el o la consultante:
+
+  / Line Items
+  .small-12.large-12.columns
+    %input{checked: true, name: "val_jur_dec_policial", type: "checkbox", :value => true}
+    %label Declaración Policial
+  .small-12.large-12.columns
+    %input{checked: false, name: "val_jur_dec_ficalia", type: "checkbox", :value => true}
+    %label Declaración en Fiscalía
+  .small-12.large-12.columns
+    %input{checked: false, name: "val_jur_medico_legal", type: "checkbox", :value => true}
+    %label Examen médico-legal
+  .small-12.large-12.columns
+    %input{checked: false, name: "val_jur_peritaje", type: "checkbox", :value => true}
+    %label Peritaje psicológico-psiquiátrico
+  .small-12.large-12.columns
+    .row
+      .small-5.columns
+        %input{checked: false, name: "val_jur_reconocimiento", type: "checkbox", :value => true}
+        %label Reconocimiento Imputado
+      .small-1.columns
+        %label ¿Dónde?
+      .small-5.columns
+        %input{type: "text", name: "val_jur_reconocimiento_text"}
+
+  .small-12.large-12.columns
+    .row
+      .small-5.columns
+        %input{checked: false, name: "val_jur_otras", type: "checkbox", :value => true}
+        %label Otras
+      .small-1.columns
+        %label ¿Cuáles?
+      .small-5.columns
+        %input{type: "text", name: "val_jur_otras_text"}
+
+
+.row.forms
+  .subtitle Estado de Causa:
+
+  / Line Items
+  .small-6.large-6.columns
+    %input{checked: true, name: "estado_causa_fromalizada", type: "checkbox", :value => true}
+    %label Formalizada
+
+  .small-6.large-6.columns
+    %input{checked: true, name: "estado_causa_no_fromalizada", type: "checkbox", :value => true}
+    %label No Formalizada
+
+  / Line Items
+  .small-12.large-6.columns
+    %label Tribunal:
+    %select{name: "estado_causa_tribunal"}
+      -(1..5).each do |i|
+        %option Tribunal
+
+  .small-12.large-6.columns
+    %label Otros (Indique):
+    %input{type: "text", name: "estado_causa_otros"}
+
+  / Line Items
+  .small-12.large-6.columns
+    %label Fiscalia:
+    %select{name: "estado_causa_ficalia"}
+      -(1..5).each do |i|
+        %option Fiscalía
+  .small-12.large-6.columns
+    %p
+
+  / Line Items
+  .small-12.large-12.columns
+    %label Medidas de Protección:
+  .small-12.large-12.columns
+    %label
+    %input{checked: true, name: "medidas_protecion", type: "radio", :value => "si"}
+    %label Si
+  .small-12.large-12.columns
+    %input{checked: false, name: "medidas_protecion", type: "radio", :value => "no"}
+    %label No
+
+
+  / Line Items
+  .small-12.large-6.columns
+    %label Cuáles:
+    %input{type: "text", name: "medidas_protecion_cuales"}
+  .small-12.large-6.columns
+    %label Dónde:
+    %input{type: "text", name: "medidas_protecion_donde"}
+
+
+  / Line Items
+  .small-12.large-12.columns
+    %label Medidas Cautelares:
+  .small-12.large-12.columns
+    %label
+    %input{checked: true, name: "medidas_cautelares", type: "radio", :value => "si"}
+    %label Si
+  .small-12.large-12.columns
+    %input{checked: false, name: "medidas_cautelares", type: "radio", :value => "no"}
+    %label No
+
+
+  / Line Items
+  .small-12.large-6.columns
+    %label Cuáles:
+    %input{type: "text", name: "medidas_cautelares_cuales"}
+  .small-12.large-6.columns
+    %p
+
+
+.row.forms
+  .subtitle Tribunales de Familia:
+
+  / Line Items
+  .small-6.large-6.columns
+    %label Causa en Tribunales de Familia
+    .row
+      .small-12.large-12.columns
+        %input{checked: true, name: "causa_tribunales_famila", type: "radio", :value => "si"}
+        %label Si
+      .small-12.large-12.columns
+        %input{checked: false, name: "causa_tribunales_famila", type: "radio", :value => "no"}
+        %label No
+
+  .small-6.large-6.columns
+    %label Tribunal Componente:
+    %select{name: "causa_tribunales_tribunal"}
+      -(1..5).each do |i|
+        %option Tribunal
+
+.row.forms
+  / Line Items
+  .small-6.large-6.columns
+    %label Materia:
+    %input{type: "text", name: "causa_tribunales_materia"}
+  .small-6.large-6.columns
+    %label Requirente:
+    %input{type: "text", name: "causa_tribunales_requirente"}
+
+  / Line Items
+  .small-6.large-6.columns
+    %label Rit:
+    %input{type: "text", name: "causa_tribunales_rit"}
+  .small-6.large-6.columns
+    %p
+
+
+.row.forms
+  .step Conclusiones y pronóstico
+
+  .small-12.large-12.columns
+    %label (Visión general)
+    %textarea{rows: 6, name: "text_red_apoyo"} text...
+
+
+
+
+
+
+
+
+
+
+
+
