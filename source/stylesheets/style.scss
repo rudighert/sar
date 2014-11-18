@@ -3,6 +3,7 @@ $gray_box: #efefef;
 $text_blue: #0099ce;
 $text_gray: #686968;
 $bg_blue: #0099cf;
+$dark_gray: #e0e0e0;
 
 .icons-sprite{@include inline-block;}
 $icon-layout:smart;
@@ -21,10 +22,25 @@ $icons-sprite-dimensions: true;
 .title_box_blue{
   color: white;
   background-color: $bg_blue;
+  padding: 6px;
+  margin: 5px 0;
+  font-size: 16px;
 }
 .title_box_gray{
   color: $text_blue;
   background-color: $gray_box;
+  padding: 6px;
+  font-size: 16px;
+}
+
+.item{
+  padding: 5px 5px;
+  .blue{
+    color: $text_blue;
+  }
+  .green{
+    color: green;
+  }
 }
 
 #header{
@@ -74,6 +90,12 @@ $icons-sprite-dimensions: true;
       .icon.close{@extend .icons-salir;}
     }
   }
+
+  @media only screen and (max-width: 760px) {
+    .item_menu a{
+      font-size: 10px;
+    }
+  }
 }
 
 section#login{
@@ -121,6 +143,9 @@ section#login{
     min-height: 163px;
     border: 1px solid gray;
     margin-bottom: 10px;
+  }
+  .area_captacha{
+    min-height: 73px;
   }
 }
 
@@ -182,29 +207,42 @@ section#login{
   }
   .subtitle{
     color: $text_blue;
-    font-size: 14px;
+    font-size: 16px;
   }
   label{
     padding: 10px 0;
+    &.blue{
+      color: $text_blue;
+    }
   }
 }
 
 .general_table{
   margin: 45px 0;
+  width: 100%;
   .sort{
     position: relative;
     padding-right: 20px;
     &:after{
       content: '';
-      width: 10px;
-      height: 10px;
-      background-color: $bg_blue;
       position: absolute;
       top: 50%;
       right: 7px;
-      margin-top: -5px;
+      margin-top: -12px;
+      cursor: pointer;
+    }
+    &.desc{
+      &:after{
+        @extend .icons-sort_desc;
+      }
+    }
+    &.asc{
+      &:after{
+        @extend .icons-sort_asc;
+      }
     }
   }
+
 
   thead th{
     color: $text_blue;
@@ -224,6 +262,10 @@ section#login{
     top: 0;
   }
   .calendar{
+    padding-left: 50px;
+  }
+
+  .hour{
     padding-left: 50px;
   }
 }
@@ -279,11 +321,38 @@ section#login{
 
 .box_gray{
   background-color: #efefef;
+  margin: 2px 0;
   .text_info{
     margin: 20px 10px;
   }
   .blue{
     color: $text_blue;
+  }
+}
+
+.border_gray{
+  border: 2px solid #efefef;
+}
+.box_items{
+  background-color: #efefef;
+  margin: 2px 0;
+  padding: 5px 30px 5px 10px;
+  position: relative;
+
+  &.blue{
+    color: white;
+    background-color: $bg_blue;
+  }
+  &.dark_gray{
+    background-color: $dark_gray;
+  }
+  .icons{
+    position: absolute;
+    right: 5px;
+    top: 0px;
+  }
+  &.top{
+    margin-top: 20px;
   }
 }
 
@@ -302,4 +371,14 @@ section#login{
 }
 .detalle_objetivo{
   background-color: #efefef;
+}
+
+#cases{
+  label.filter{
+    color: $text_blue;
+  }
+}
+
+#buttons_action{
+  margin-top: 30px;
 }

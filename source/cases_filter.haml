@@ -1,11 +1,54 @@
 =partial 'partials/menu_logged'
 %section#cases
   .row
-    .small-12.large-12.columns.right
-      %form{name: "login", action: "#", method: "post"}
-        .input_search
-          %input{type: "text", name: "cases_search", placeholder: "Búsqueda de casos"}
-          .search_icon.icons-sprite.icons-buscar
+    .small-2.columns
+      %label.filter Fecha de Inicio
+
+    .small-2.columns
+      .block_input_icon
+        .icon.icons-sprite.icons-date_az
+        %input.calendar{type: "text", name: "fecha_denuncia"}
+
+    .small-1.columns
+      %label.filter caso
+
+    .small-3.columns
+      %select{name: "caso"}
+        -(1..3).each do |r|
+          %option caso
+
+    .small-1.columns
+      %label.filter Centro
+
+    .small-3.columns
+      %select{name: "centro"}
+        -(1..3).each do |r|
+          %option centro
+
+
+    .small-2.columns
+      %label.filter Fecha de Término
+
+    .small-2.columns
+      .block_input_icon
+        .icon.icons-sprite.icons-date_az
+        %input.calendar{type: "text", name: "fecha_denuncia"}
+
+    .small-1.columns
+      %label.filter Profesional
+
+    .small-3.columns
+      %select{name: "Profesional"}
+        -(1..3).each do |r|
+          %option Profesional
+
+    .small-1.columns
+      %p
+
+    .small-3.columns
+      %p
+
+
 
   .row
     .small-12.large-12.columns

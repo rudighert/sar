@@ -5,7 +5,7 @@
 
 .row
   .small-4.large-4.columns
-    .title_box_blue FORMULATIO DE INGRESO A SAR
+    .title_box_blue FORMULARIO DE INGRESO A SAR
 
   .small-3.large-3.columns.right
     .title_box_gray
@@ -17,450 +17,459 @@
       %span Nº de Expediente:
       123424
 
-.row.forms
-  .step 1.- Datos Personales
-
-
-  / Line items
-  .small-12.large-6.columns
-    %label Nombres:
-    %input{type: "text", name: "name", placeholder: "Nombre"}
-
-  .small-12.large-6.columns
-    %label Apellidos:
-    %input{type: "text", name: "lastname", placeholder: "Apellido"}
-
-
-  / Line items
-  .small-12.large-6.columns
-    %label Nacionalidad:
-    %select{name: "country"}
-      %option Chileno
-      %option Argentino
-
-  .small-12.large-6.columns
-    %label ¿?:
-    %input{type: "text", name: "...", placeholder: "..."}
-
-
-  / Line items
-  .small-12.large-6.columns
-    %input{checked: true, name: "ident", type: "radio", :value => "rut"}
-    %label.inline Rut
-    %input{checked: false, name: "ident", type: "radio", :value => "passport"}
-    %label.inline Pasaporte
-
-
-  .small-12.large-6.columns
-    %input{type: "text", name: "ident_number", placeholder: "Número de Rut o pasaporte"}
-
-
-  / Line items
-  .small-12.large-6.columns
-    %label Tipo de Victima
-    %input{checked: true, name: "victim", type: "radio", :value => "directa"}
-    %label Directa
-    %input{checked: false, name: "victim", type: "radio", :value => "indirecta"}
-    %label Indirecta
-
-  .small-12.large-6.columns
-    %label Sexo
-    %input{checked: true, name: "sex", type: "radio", :value => "hombre"}
-    %label Hombre
-    %input{checked: false, name: "sex", type: "radio", :value => "mujer"}
-    %label Mujer
-
-
-  / Line items
-  .small-12.large-6.columns
-    %label Fecha de Nacimiento:
-    .block_input_icon
-      .icon.icons-sprite.icons-date_az
-      %input.calendar{type: "text", name: "birthday", placeholder: "dd/mm/aaaa"}
-
-  .small-12.large-6.columns
-    %label Edad:
-    %input{type: "text", name: "age", placeholder: "Edad"}
-
-
-  / Line items
-  .small-12.large-12.columns
-    %label Domicilio Actual:
-    %input{type: "text", name: "Adress", placeholder: "Domicilio Actual"}
-
-  / Line items
-  .small-12.large-12.columns
-    %label Región:
-    %select{name: "region"}
-      -(1..12).each do |r|
-        %option Nombre de Región
-
-
-  / Line items
-  .small-12.large-6.columns
-    %label Teléfono Fijo:
-    .block_input_phone
-      %label.pref +56
-      %select{name: "home_phone_pref"}
-        -(1..9).each do |i|
-          %option=i
-      %input.number{type: "text", name: "home_phone"}
-
-  .small-12.large-6.columns
-    %label Teléfono Móvil:
-    .block_input_phone
-      %select{name: "mobile_phone_pref"}
-        -(1..9).each do |i|
-          %option=i
-      %input.number{type: "text", name: "mobile_phone"}
-
-
-  / Line items
-  .small-12.large-12.columns
-    %label Adulto Responsable
-
-  .small-12.large-6.columns
-    %label Nombres:
-    %input{type: "text", name: "name_resp", placeholder: "Nombre"}
-
-  .small-12.large-6.columns
-    %label Apellidos:
-    %input{type: "text", name: "lastname_resp", placeholder: "Apellido"}
-
-  / Line items
-  .small-12.large-6.columns
-    %label Ocupación del Adulto Responsable:
-    %input{type: "text", name: "job_resp", placeholder: "Ocupación"}
-
-  .small-12.large-6.columns
-    %label Estado Civil:
-    %select{name: "marital_status_resp"}
-      %option Casado
-      %option Soltero
-      %option Viudo
-
-
-  / Line Items
-  .small-12.large-6.columns
-    %label Nivel Educacional:
-    %select{name: "education_level_resp"}
-      -(1..5).each do |i|
-        %option Nivel
-  .small-12.large-6.columns
-    %label Aplicar SAR:
-    .wrapp_checkbox
-      %input{type: "checkbox", name: "aplicar_sar", value:"true", checked: true}
-
-
-
-  / Line Items
-  .small-12.large-6.columns
-    %label Sitación Ocupacional:
-    %select{name: "situation_job_resp"}
-      -(1..5).each do |i|
-        %option Situación
-  .small-12.large-6.columns
-    %label Otro:
-    %input{type: "text", name: "other_resp"}
-
-
-
-.row.forms.blue_line_dot
-  .step 2.- Derivado por:
-
-  / Line Items
-  .small-12.large-6.columns
-    %input{checked: true, name: "derivado", type: "radio", :value => "soi"}
-    %label SOI (Línea 600/Carta SOI)
-  .small-12.large-6.columns
-    %input{checked: false, name: "derivado", type: "radio", :value => "tercer_contacto_soi"}
-    %label Tercer Contacto SOI
-
-  / Line Items
-  .small-12.large-6.columns
-    %input{checked: false, name: "derivado", type: "radio", :value => "ministerio_publico"}
-    %label Ministerio Público
-  .small-12.large-6.columns
-    %input{checked: false, name: "derivado", type: "radio", :value => "apoyo_victimas"}
-    %label Apoyo a Victimas 24 horas
-
-
-  / Line Items
-  .small-12.large-6.columns
-    %input{checked: false, name: "derivado", type: "radio", :value => "demanda_espontanea"}
-    %label Demanda Espontánea
-  .small-12.large-6.columns
-    %input{checked: false, name: "derivado", type: "radio", :value => "otros_indicar"}
-    %label Otros (indicar)
-
-  / Line Items
-  .small-12.large-6.columns
-    %input{checked: false, name: "derivado", type: "radio", :value => "conmocion_publica"}
-    %label Conmoción Pública
-  .small-12.large-6.columns
-    %input{checked: false, name: "derivado", type: "radio", :value => "circuito_femicidio"}
-    %label Circuito de Femicidio
-
-  / Line Items
-  .small-12.large-6.columns
-    %input{checked: false, name: "derivado", type: "radio", :value => "interna"}
-    %label Interna
-  .small-12.large-6.columns
-    %input{checked: false, name: "derivado", type: "radio", :value => "otro"}
-    %label Otro
-    %input{type: "text", name: "otro_text"}
-
-.row.forms.blue_line_dot
-  .step 3.- Descripción del delito:
-
-  / Line items
-  .small-12.large-12.columns
-    %label Hecho público:
-    %input{type: "text", name: "hecho_publico"}
-
-  / Line items
-  .small-12.large-6.columns
-    %label Delito:
-    %input{type: "text", name: "nombre_delito"}
-
-  .small-12.large-6.columns
-    %label Fecha de Nacimiento:
-    .block_input_icon
-      .icon.icons-sprite.icons-date_az
-      %input.calendar{type: "text", name: "fecha_delito"}
-
-
-  / Line Items
-  .small-12.large-12.columns
-    %label Contexto de VIF: (todos los delitos no sólo los de carácgter sexual)
-  .small-12.large-6.columns
-    %input{checked: true, name: "contexto_vif", type: "radio", :value => "si"}
-    %label SI
-  .small-12.large-6.columns
-    %input{checked: false, name: "contexto_vif", type: "radio", :value => "no"}
-    %label NO
-
-  / Line Items
-  .small-12.large-6.columns
-    %input{checked: false, name: "contexto_vif", type: "radio", :value => "episodio_unico"}
-    %label Episodio Único
-  .small-12.large-6.columns
-    %input{checked: false, name: "contexto_vif", type: "radio", :value => "varios_episodios"}
-    %label Varios Episodios
-
-
-  / Line items
-  .small-12.large-12.columns
-    %label Comuna donde ocurre el delito:
-  .small-12.large-6.columns
-    %select{name: "delito_region"}
-      -(1..12).each do |r|
-        %option Nombre de Región
-  .small-12.large-6.columns
-    %select{name: "delito_comuna"}
-      -(1..12).each do |r|
-        %option Nombre de comuna
-
-  / Line items
-  .small-12.large-12.columns
-    %label Número de agresores:
-    %input{type: "text", name: "numero_agresores"}
-
-
-  / Line Items
-  .small-12.large-12.columns
-    %label Sexo del o los agresores: (en su mayoría)
-  .small-4.large-4.columns
-    %input{checked: true, name: "sexo_agresores", type: "radio", :value => "hombre"}
-    %label Hombre (s)
-  .small-4.large-4.columns
-    %input{checked: false, name: "sexo_agresores", type: "radio", :value => "mujer"}
-    %label Mujer (es)
-  .small-4.large-4.columns
-    %input{checked: false, name: "sexo_agresores", type: "radio", :value => "no_sabe"}
-    %label No Sabe
-
-
-  / Line Items
-  .small-12.large-12.columns
-    %label Relación con el agresor:
-  .small-4.large-4.columns
-    %input{checked: true, name: "relacion_agresor", type: "radio", :value => "s_datos"}
-    %label S/Datos
-  .small-4.large-4.columns
-    %input{checked: false, name: "relacion_agresor", type: "radio", :value => "desconocido"}
-    %label Desconocido
-  .small-4.large-4.columns
-    %input{checked: false, name: "relacion_agresor", type: "radio", :value => "conocido"}
-    %label Conocido
-
-  .small-4.large-4.columns
-    %input{checked: false, name: "relacion_agresor", type: "radio", :value => "familiar"}
-    %label Familiar
-  .small-8.large-8.columns
-    %input{checked: false, name: "relacion_agresor", type: "radio", :value => "no_familiar"}
-    %label No Familiar
-
-
-  / Line Items
-  .small-12.large-12.columns
-    %label Relación con el agresor:
-  .small-4.large-4.columns
-    %input{checked: true, name: "lugar_ocurrencia", type: "radio", :value => "s_datos"}
-    %label S/Datos
-  .small-4.large-4.columns
-    %input{checked: false, name: "lugar_ocurrencia", type: "radio", :value => "medios_transporte"}
-    %label Medios de Transporte
-  .small-4.large-4.columns
-    %input{checked: false, name: "lugar_ocurrencia", type: "radio", :value => "domicilio_particular"}
-    %label Domicilio Particular
-
-  .small-4.large-4.columns
-    %input{checked: false, name: "lugar_ocurrencia", type: "radio", :value => "lugar_recreacion"}
-    %label Lugar de Recreación
-  .small-4.large-4.columns
-    %input{checked: false, name: "lugar_ocurrencia", type: "radio", :value => "domicilio_laboral"}
-    %label Domicilio Laboral o Lugar de Estudio
-  .small-4.large-4.columns
-    %input{checked: false, name: "lugar_ocurrencia", type: "radio", :value => "via_publica"}
-    %label Via Pública
-
-  / Line Items
-  .small-12.large-12.columns
-    %input{checked: false, name: "lugar_ocurrencia", type: "radio", :value => "otro"}
-    %label Otro
-    %input{type: "text", name: "text_otro_agresor"}
-
-  / Line Items
-  .small-12.large-12.columns
-    %label Motivo de Ingreso
-    %textarea{rows: 6, name: "motivo_ingreso_delito"} text...
-
-
-
-.row.forms.blue_line_dot
-  .step 4.- Situación Legal:
-
-  / Line Items
-  .small-12.large-6.columns
-    %label Existe denuncioa
-    %input{checked: true, name: "extiste_denuncia", type: "radio", :value => "si"}
-    %label SI
-    %input{checked: false, name: "extiste_denuncia", type: "radio", :value => "no"}
-    %label NO
-  .small-12.large-6.columns
-    %label Fecha de Nacimiento:
-    .block_input_icon
-      .icon.icons-sprite.icons-date_az
-      %input.calendar{type: "text", name: "fecha_denuncia"}
-
-
-  / Line items
-  .small-12.large-12.columns
-    %label Fiscalía:
-  .small-12.large-6.columns
-    %select{name: "fiscalia_region"}
-      -(1..12).each do |r|
-        %option Región
-  .small-12.large-6.columns
-    %select{name: "nombre_fiscalia"}
-      -(1..12).each do |r|
-        %option ficalía
-
-
-  / Line Items
-  .small-12.large-12.columns
-    %label Causa / RUC N:
-    %input{type: "text", name: "causa_ruc"}
-
-
-  / Line Items
-  .small-12.large-12.columns
-    %label Descripción de los efectos del delito
-  .small-3.large-3.columns
-    %input{type: "checkbox", name: "efectos_delitos", value:"emocional", checked: true}
-    %label Efectos Emocionales
-  .small-3.large-3.columns
-    %input{type: "checkbox", name: "efectos_delitos", value:"familiar", checked: false}
-    %label Efectos familiares y sociales
-  .small-3.large-3.columns
-    %input{type: "checkbox", name: "efectos_delitos", value:"fisicos", checked: false}
-    %label Efectos Fisicos
-  .small-3.large-3.columns
-    %input{type: "checkbox", name: "efectos_delitos", value:"area_educativa", checked: false}
-    %label Efectos en el área educativa y laboral
-  .small-12.large-12.columns
-    %input{type: "checkbox", name: "efectos_delitos", value:"economico", checked: false}
-    %label Efectos ecnomómicos
-
-  / Line Items
-  .small-12.large-12.columns
-    %label Situación postdelictiva (consecuencia del delito en diferentes áreas: psicológicas, fisicas, lanoral, salud y judicial)
-    %textarea{rows: 6, name: "situacion_postdelictivs"} text...
-
-  .small-12.large-12.columns
-    %label Factores de Riesgo:
-    .block_checkbox
-      %input{type: "checkbox", name: "factores_riesgo", value:"escasa_nula", checked: true}
-      %label Escasa o nula vinculación con redes de apoyo
-
-    .block_checkbox
-      %input{type: "checkbox", name: "factores_riesgo", value:"victimizacion", checked: true}
-      %label Histosia(s) de victimización(es) anterior al delito
-
-    .block_checkbox
-      %input{type: "checkbox", name: "factores_riesgo", value:"contexto_violencia", checked: true}
-      %label Contexto de violencia barrial y/o familiar
-
-    .block_checkbox
-      %input{type: "checkbox", name: "factores_riesgo", value:"movilidad", checked: true}
-      %label Movilidad Residencial
-
-    .block_checkbox
-      %input{type: "checkbox", name: "factores_riesgo", value:"vinculo", checked: true}
-      %label Vinculo con el/los agresor(a)
-
-    .block_checkbox
-      %input{type: "checkbox", name: "factores_riesgo", value:"amenazas", checked: true}
-      %label Amenazas por parte del agresor(a) o cercanos(as)
-
-    .block_checkbox
-      %input{type: "checkbox", name: "factores_riesgo", value:"antecesentes_salud", checked: true}
-      %label Antecedentes de salud fisica o mental (incluido el consumo del alcohol y drogas)
-
-    .block_checkbox
-      %input{type: "checkbox", name: "factores_riesgo", value:"desempleo", checked: true}
-      %label Desempleo
-
-    .block_checkbox
-      %input{type: "checkbox", name: "factores_riesgo", value:"victima_secundaria", checked: true}
-      %label Victimización secundaria
-
-    .block_checkbox
-      %input{type: "checkbox", name: "factores_riesgo", value:"insatisfaccion", checked: true}
-      %label Insatifaccion de necesidades básicas
-
-    .block_checkbox
-      %input{type: "checkbox", name: "factores_riesgo", value:"otro_riesgo", checked: true}
-      %label otro
-      %input{type: "text", name: "otro_riesgo_text"}
-
-
-
-
-
-.row.forms.blue_line_dot
-  .step 5.- Demandas y expectativas:
-  / Line Items
-  .small-12.large-12.columns
-    %textarea{rows: 6, name: "demandas_expectativas"} text...
-
-.row.forms.blue_line_dot
-  .step 6.- Observaciones:
-  / Line Items
-  .small-12.large-12.columns
-    %textarea{rows: 6, name: "observaciones"} text...
 
+
+%form{name: "form_sar", action: "#", method: "post"}
+  .row.forms
+    .step 1.- Datos Personales
+
+
+    / Line items
+    .small-12.large-6.columns
+      %label Nombres:
+      %input{type: "text", name: "name", placeholder: "Nombre"}
+
+    .small-12.large-6.columns
+      %label Apellidos:
+      %input{type: "text", name: "lastname", placeholder: "Apellido"}
+
+
+    / Line items
+    .small-12.large-6.columns
+      %label Nacionalidad:
+      %select{name: "country"}
+        %option Chileno
+        %option Argentino
+
+    .small-12.large-6.columns
+      %label Otro:
+      %input{type: "text", name: "...", placeholder: "..."}
+
+
+    / Line items
+    .small-12.large-6.columns
+      %input{checked: true, name: "ident", type: "radio", :value => "rut"}
+      %label.inline Rut
+      %input{checked: false, name: "ident", type: "radio", :value => "passport"}
+      %label.inline Pasaporte
+
+
+    .small-12.large-6.columns
+      %input{type: "text", name: "ident_number", placeholder: "Número de Rut o pasaporte"}
+
+
+    / Line items
+    .small-12.large-6.columns
+      %label Tipo de Victima
+      %input{checked: true, name: "victim", type: "radio", :value => "directa"}
+      %label Directa
+      %input{checked: false, name: "victim", type: "radio", :value => "indirecta"}
+      %label Indirecta
+
+    .small-12.large-6.columns
+      %label Sexo
+      %input{checked: true, name: "sex", type: "radio", :value => "hombre"}
+      %label Hombre
+      %input{checked: false, name: "sex", type: "radio", :value => "mujer"}
+      %label Mujer
+
+
+    / Line items
+    .small-12.large-6.columns
+      %label Fecha de Nacimiento:
+      .block_input_icon
+        .icon.icons-sprite.icons-date_az
+        %input.calendar{type: "text", name: "birthday", placeholder: "dd/mm/aaaa"}
+
+    .small-12.large-6.columns
+      %label Edad:
+      %input{type: "text", name: "age", placeholder: "Edad"}
+
+
+    / Line items
+    .small-12.large-12.columns
+      %label Domicilio Actual:
+      %input{type: "text", name: "Adress", placeholder: "Domicilio Actual"}
+
+    / Line items
+    .small-6.large-6.columns
+      %label Región:
+      %select{name: "region"}
+        -(1..12).each do |r|
+          %option Nombre de Región
+
+    .small-6.large-6.columns
+      %label Comuna:
+      %select{name: "comuna"}
+        -(1..12).each do |r|
+          %option Nombre de Comuna
+
+    / Line items
+    .small-12.large-6.columns
+      %label Teléfono Fijo:
+      .block_input_phone
+        %label.pref +56
+        %select{name: "home_phone_pref"}
+          -(1..9).each do |i|
+            %option=i
+        %input.number{type: "text", name: "home_phone"}
+
+    .small-12.large-6.columns
+      %label Teléfono Móvil:
+      .block_input_phone
+        %select{name: "mobile_phone_pref"}
+          -(1..9).each do |i|
+            %option=i
+        %input.number{type: "text", name: "mobile_phone"}
+
+
+    / Line items
+    .small-12.large-12.columns
+      %label Adulto Responsable
+
+    .small-12.large-6.columns
+      %label Nombres:
+      %input{type: "text", name: "name_resp", placeholder: "Nombre"}
+
+    .small-12.large-6.columns
+      %label Apellidos:
+      %input{type: "text", name: "lastname_resp", placeholder: "Apellido"}
+
+    / Line items
+    .small-12.large-6.columns
+      %label Ocupación del Adulto Responsable:
+      %input{type: "text", name: "job_resp", placeholder: "Ocupación"}
+
+    .small-12.large-6.columns
+      %label Estado Civil:
+      %select{name: "marital_status_resp"}
+        %option Casado
+        %option Soltero
+        %option Viudo
+
+
+    / Line Items
+    .small-12.large-6.columns
+      %label Nivel Educacional:
+      %select{name: "education_level_resp"}
+        -(1..5).each do |i|
+          %option Nivel
+    .small-12.large-6.columns
+      %label Aplicar SAR:
+      .wrapp_checkbox
+        %input{type: "checkbox", name: "aplicar_sar", value:"true", checked: true}
+
+
+
+    / Line Items
+    .small-12.large-6.columns
+      %label Sitación Ocupacional:
+      %select{name: "situation_job_resp"}
+        -(1..5).each do |i|
+          %option Situación
+    .small-12.large-6.columns
+      %label Otro:
+      %input{type: "text", name: "other_resp"}
+
+
+
+  .row.forms.blue_line_dot
+    .step 2.- Derivado por:
+
+    / Line Items
+    .small-12.large-6.columns
+      %input{checked: true, name: "derivado", type: "radio", :value => "soi"}
+      %label SOI (Línea 600/Carta SOI)
+    .small-12.large-6.columns
+      %input{checked: false, name: "derivado", type: "radio", :value => "tercer_contacto_soi"}
+      %label Tercer Contacto SOI
+
+    / Line Items
+    .small-12.large-6.columns
+      %input{checked: false, name: "derivado", type: "radio", :value => "ministerio_publico"}
+      %label Ministerio Público
+    .small-12.large-6.columns
+      %input{checked: false, name: "derivado", type: "radio", :value => "apoyo_victimas"}
+      %label Apoyo a Victimas 24 horas
+
+
+    / Line Items
+    .small-12.large-6.columns
+      %input{checked: false, name: "derivado", type: "radio", :value => "demanda_espontanea"}
+      %label Demanda Espontánea
+    .small-12.large-6.columns
+      %input{checked: false, name: "derivado", type: "radio", :value => "otros_indicar"}
+      %label Otros (indicar)
+
+    / Line Items
+    .small-12.large-6.columns
+      %input{checked: false, name: "derivado", type: "radio", :value => "conmocion_publica"}
+      %label Conmoción Pública
+    .small-12.large-6.columns
+      %input{checked: false, name: "derivado", type: "radio", :value => "circuito_femicidio"}
+      %label Circuito de Femicidio
+
+    / Line Items
+    .small-12.large-6.columns
+      %input{checked: false, name: "derivado", type: "radio", :value => "interna"}
+      %label Interna
+    .small-12.large-6.columns
+      %input{checked: false, name: "derivado", type: "radio", :value => "otro"}
+      %label Otro
+      %input{type: "text", name: "otro_text"}
+
+  .row.forms.blue_line_dot
+    .step 3.- Descripción del delito:
+
+    / Line items
+    .small-12.large-12.columns
+      %label Hecho público:
+      %input{type: "text", name: "hecho_publico"}
+
+    / Line items
+    .small-12.large-6.columns
+      %label Delito:
+      %input{type: "text", name: "nombre_delito"}
+
+    .small-12.large-6.columns
+      %label Fecha de Nacimiento:
+      .block_input_icon
+        .icon.icons-sprite.icons-date_az
+        %input.calendar{type: "text", name: "fecha_delito"}
+
+
+    / Line Items
+    .small-12.large-12.columns
+      %label Contexto de VIF: (todos los delitos no sólo los de carácgter sexual)
+    .small-12.large-6.columns
+      %input{checked: true, name: "contexto_vif", type: "radio", :value => "si"}
+      %label SI
+    .small-12.large-6.columns
+      %input{checked: false, name: "contexto_vif", type: "radio", :value => "no"}
+      %label NO
+
+    / Line Items
+    .small-12.large-6.columns
+      %input{checked: false, name: "contexto_vif", type: "radio", :value => "episodio_unico"}
+      %label Episodio Único
+    .small-12.large-6.columns
+      %input{checked: false, name: "contexto_vif", type: "radio", :value => "varios_episodios"}
+      %label Varios Episodios
+
+
+    / Line items
+    .small-12.large-12.columns
+      %label Comuna donde ocurre el delito:
+    .small-12.large-6.columns
+      %select{name: "delito_region"}
+        -(1..12).each do |r|
+          %option Nombre de Región
+    .small-12.large-6.columns
+      %select{name: "delito_comuna"}
+        -(1..12).each do |r|
+          %option Nombre de comuna
+
+    / Line items
+    .small-12.large-12.columns
+      %label Número de agresores:
+      %input{type: "text", name: "numero_agresores"}
+
+
+    / Line Items
+    .small-12.large-12.columns
+      %label Sexo del o los agresores: (en su mayoría)
+    .small-4.large-4.columns
+      %input{checked: true, name: "sexo_agresores", type: "radio", :value => "hombre"}
+      %label Hombre (s)
+    .small-4.large-4.columns
+      %input{checked: false, name: "sexo_agresores", type: "radio", :value => "mujer"}
+      %label Mujer (es)
+    .small-4.large-4.columns
+      %input{checked: false, name: "sexo_agresores", type: "radio", :value => "no_sabe"}
+      %label No Sabe
+
+
+    / Line Items
+    .small-12.large-12.columns
+      %label Relación con el agresor:
+    .small-4.large-4.columns
+      %input{checked: true, name: "relacion_agresor", type: "radio", :value => "s_datos"}
+      %label S/Datos
+    .small-4.large-4.columns
+      %input{checked: false, name: "relacion_agresor", type: "radio", :value => "desconocido"}
+      %label Desconocido
+    .small-4.large-4.columns
+      %input{checked: false, name: "relacion_agresor", type: "radio", :value => "conocido"}
+      %label Conocido
+
+    .small-4.large-4.columns
+      %input{checked: false, name: "relacion_agresor", type: "radio", :value => "familiar"}
+      %label Familiar
+    .small-8.large-8.columns
+      %input{checked: false, name: "relacion_agresor", type: "radio", :value => "no_familiar"}
+      %label No Familiar
+
+
+    / Line Items
+    .small-12.large-12.columns
+      %label Relación con el agresor:
+    .small-4.large-4.columns
+      %input{checked: true, name: "lugar_ocurrencia", type: "radio", :value => "s_datos"}
+      %label S/Datos
+    .small-4.large-4.columns
+      %input{checked: false, name: "lugar_ocurrencia", type: "radio", :value => "medios_transporte"}
+      %label Medios de Transporte
+    .small-4.large-4.columns
+      %input{checked: false, name: "lugar_ocurrencia", type: "radio", :value => "domicilio_particular"}
+      %label Domicilio Particular
+
+    .small-4.large-4.columns
+      %input{checked: false, name: "lugar_ocurrencia", type: "radio", :value => "lugar_recreacion"}
+      %label Lugar de Recreación
+    .small-4.large-4.columns
+      %input{checked: false, name: "lugar_ocurrencia", type: "radio", :value => "domicilio_laboral"}
+      %label Domicilio Laboral o Lugar de Estudio
+    .small-4.large-4.columns
+      %input{checked: false, name: "lugar_ocurrencia", type: "radio", :value => "via_publica"}
+      %label Via Pública
+
+    / Line Items
+    .small-12.large-12.columns
+      %input{checked: false, name: "lugar_ocurrencia", type: "radio", :value => "otro"}
+      %label Otro
+      %input{type: "text", name: "text_otro_agresor"}
+
+    / Line Items
+    .small-12.large-12.columns
+      %label Motivo de Ingreso
+      %textarea{rows: 6, name: "motivo_ingreso_delito"} text...
+
+
+
+  .row.forms.blue_line_dot
+    .step 4.- Situación Legal:
+
+    / Line Items
+    .small-12.large-6.columns
+      %label Existe denuncia
+      %input{checked: true, name: "extiste_denuncia", type: "radio", :value => "si"}
+      %label SI
+      %input{checked: false, name: "extiste_denuncia", type: "radio", :value => "no"}
+      %label NO
+    .small-12.large-6.columns
+      %label Fecha:
+      .block_input_icon
+        .icon.icons-sprite.icons-date_az
+        %input.calendar{type: "text", name: "fecha_denuncia"}
+
+
+    / Line items
+    .small-12.large-12.columns
+      %label Fiscalía:
+    .small-12.large-6.columns
+      %select{name: "fiscalia_region"}
+        -(1..12).each do |r|
+          %option Región
+    .small-12.large-6.columns
+      %select{name: "nombre_fiscalia"}
+        -(1..12).each do |r|
+          %option ficalía
+
+
+    / Line Items
+    .small-12.large-12.columns
+      %label Causa / RUC N:
+      %input{type: "text", name: "causa_ruc"}
+
+
+    / Line Items
+    .small-12.large-12.columns
+      %label Descripción de los efectos del delito
+    .small-3.large-3.columns
+      %input{type: "checkbox", name: "efectos_delitos", value:"emocional", checked: true}
+      %label Efectos Emocionales
+    .small-3.large-3.columns
+      %input{type: "checkbox", name: "efectos_delitos", value:"familiar", checked: false}
+      %label Efectos familiares y sociales
+    .small-3.large-3.columns
+      %input{type: "checkbox", name: "efectos_delitos", value:"fisicos", checked: false}
+      %label Efectos Fisicos
+    .small-3.large-3.columns
+      %input{type: "checkbox", name: "efectos_delitos", value:"area_educativa", checked: false}
+      %label{for: "efectos_delitos"} Efect. área educativa y laboral
+    .small-12.large-12.columns
+      %input{type: "checkbox", name: "efectos_delitos", value:"economico", checked: false}
+      %label Efectos ecnomómicos
+
+    / Line Items
+    .small-12.large-12.columns
+      %label Situación postdelictiva (consecuencia del delito en diferentes áreas: psicológicas, fisicas, lanoral, salud y judicial)
+      %textarea{rows: 6, name: "situacion_postdelictivs"} text...
+
+    .small-12.large-12.columns
+      %label Factores de Riesgo:
+      .block_checkbox
+        %input{type: "checkbox", name: "factores_riesgo", value:"escasa_nula", checked: true}
+        %label Escasa o nula vinculación con redes de apoyo
+
+      .block_checkbox
+        %input{type: "checkbox", name: "factores_riesgo", value:"victimizacion", checked: true}
+        %label Historia(s) de victimización(es) anterior al delito
+
+      .block_checkbox
+        %input{type: "checkbox", name: "factores_riesgo", value:"contexto_violencia", checked: true}
+        %label Contexto de violencia barrial y/o familiar
+
+      .block_checkbox
+        %input{type: "checkbox", name: "factores_riesgo", value:"movilidad", checked: true}
+        %label Movilidad Residencial
+
+      .block_checkbox
+        %input{type: "checkbox", name: "factores_riesgo", value:"vinculo", checked: true}
+        %label Vinculo con el/los agresor(a)
+
+      .block_checkbox
+        %input{type: "checkbox", name: "factores_riesgo", value:"amenazas", checked: true}
+        %label Amenazas por parte del agresor(a) o cercanos(as)
+
+      .block_checkbox
+        %input{type: "checkbox", name: "factores_riesgo", value:"antecesentes_salud", checked: true}
+        %label Antecedentes de salud fisica o mental (incluido el consumo del alcohol y drogas)
+
+      .block_checkbox
+        %input{type: "checkbox", name: "factores_riesgo", value:"desempleo", checked: true}
+        %label Desempleo
+
+      .block_checkbox
+        %input{type: "checkbox", name: "factores_riesgo", value:"victima_secundaria", checked: true}
+        %label Victimización secundaria
+
+      .block_checkbox
+        %input{type: "checkbox", name: "factores_riesgo", value:"insatisfaccion", checked: true}
+        %label Insatifaccion de necesidades básicas
+
+      .block_checkbox
+        %input{type: "checkbox", name: "factores_riesgo", value:"otro_riesgo", checked: true}
+        %label otro
+        %input{type: "text", name: "otro_riesgo_text"}
+
+
+
+
+
+  .row.forms.blue_line_dot
+    .step 5.- Demandas y expectativas:
+    / Line Items
+    .small-12.large-12.columns
+      %textarea{rows: 6, name: "demandas_expectativas"} text...
+
+  .row.forms.blue_line_dot
+    .step 6.- Observaciones:
+    / Line Items
+    .small-12.large-12.columns
+      %textarea{rows: 6, name: "observaciones"} text...
+
+  =partial 'partials/action_buttons'
 
 
 

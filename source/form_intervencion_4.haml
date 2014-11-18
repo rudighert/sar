@@ -1,0 +1,50 @@
+=partial 'partials/menu_logged'
+
+.row
+  =partial 'partials/menu_forms', locals: {select: "Citación"}
+
+
+%section#intevencion_especial
+  %form{name: "form_intervencion_4", action: "#", method: "post"}
+
+    .row.forms
+      .small-4.columns
+        .box_gray
+          .item Fecha: 17/01/2014
+          .item Nombre: Nombre Usuario
+          .item Rut/Pasaporte: 11.111.111-1
+          .item Nacionalidad: Chileno
+          .item Dirección:
+          .item Comuna:
+          .item Ocupación:
+          .item Delito: Robo con intimidación
+          .item Ingreso CAVD:
+
+      .small-8.columns
+        .row.box_items.blue
+          .small-12.columns.item Intervención Psiquiátrica:
+        .row
+          .small-12-columns.item
+            %label Antecedentes de derivación
+            %textarea{rows: 6, name: "descripcion_sintomas"} Descripción - fenomenológia de los síntomas
+            %textarea{rows: 6, name: "descripcion_delictual"} Descripción fenemenológixa del usuario/a previa al hecho delictual
+            %textarea{rows: 6, name: "diagnostico"} Diagnóstivo
+            %textarea{rows: 6, name: "descripcion"} Descripción tratamiento famacológico y patologías
+        .row
+          .small-12-columns
+            %label Objetivos del tratamiento
+            %table{:width => "100%"}
+              %tr
+                %td{:width => "30%"} Objetivo 1
+                %td{:width => "70%"} Detalle objetivo 1
+              %tr
+                %td Objetivo 2
+                %td Detalle objetivo 2
+              %tr
+                %td Objetivo 3
+                %td Detalle objetivo 3
+        .row
+          .small-12.columns.to_right
+            %button Aceptar
+
+

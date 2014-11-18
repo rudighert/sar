@@ -1,0 +1,87 @@
+=partial 'partials/menu_logged'
+
+.row
+  =partial 'partials/menu_forms', locals: {select: "Egreso"}
+
+.row
+  .small-4.large-4.columns
+    .title_box_blue FORMULATIO DE INGRESO A SAR
+
+  .small-3.large-3.columns.right
+    .title_box_gray
+      %span Fecha:
+      07/11/2014
+
+  .small-5.large-5.columns.right
+    .title_box_gray
+      %span Nº de Expediente:
+      123424
+
+
+.row.forms
+  / Line items
+  .small-8.columns
+    %label Nombre:
+    %input{type: "text", name: "name", placeholder: "nombre"}
+  .small-4.columns
+    %p
+
+
+  / Line items
+  .small-8.columns
+    %label Username:
+    %input{type: "text", name: "username", placeholder: "username"}
+  .small-4.columns
+    %p
+
+  / Line items
+  .small-8.columns
+    %label Correo
+    %input{type: "email", name: "email", placeholder: "e-mail"}
+  .small-4.columns
+    %p
+
+  / Line items
+  .small-8.columns
+    %label Grupo de Visación
+    %select{name: "grupo_visacion"}
+      -(1..5).each do |r|
+        %option Grupo
+  .small-4.columns
+    %p
+
+.row.forms
+
+  / Line Items
+  .small-12.large-12.columns
+    %table.general_table.table_asistencia
+      %thead
+        %tr
+          %th{:width => "5%"}
+          %th{:width => "15%"} Nombre
+          %th{:width => "20%"} Grupo Visción
+          %th{:width => "20%"} Correo
+          %th{:width => "20%"} Perfil
+          %th{:width => "20%"} Centro
+
+      %tbody
+        -(1..4).each do |i|
+          %tr
+            %td
+              %input{checked: true, name: "table_select", type: "checkbox", :value => true}
+            %td ...
+            %td ...
+            %td ...
+            %td ...
+            %td ...
+
+  .small-12.large-12.columns.to_right
+    %button Eliminar
+    %button Aceptar
+
+  =partial 'partials/paginate_table'
+
+
+
+
+

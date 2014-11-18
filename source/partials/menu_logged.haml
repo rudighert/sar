@@ -1,13 +1,16 @@
 #menu_logged
   %nav.top-bar{"data-topbar" => "", :role => "navigation"}
-
-    %section.top-bar-section
-      %ul.left
-        %li.item_menu.active
+    %ul.title-area
+      %li.name
+        %h1.item_menu.active
           %a{:href => "index.html"}
             .icon.home
             Inicio
-
+      %li.toggle-topbar.menu-icon
+        %a{:href => "#"}
+          %span Menu
+    %section.top-bar-section
+      %ul.left
         %li.item_menu
           %a{:href => "#"}
             .icon.user
@@ -28,5 +31,26 @@
           %a{:href => "#"}
             .icon.close
             Cerrar Sesión
+      / Left Nav Section
+
+  / %nav.top-bar{"data-topbar" => "", :role => "navigation"}
+  /   %ul.title-area
+  /     %li.name
+  /       %h1
+  /         %a{:href => "#"} My Site
+  /     / Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone
+  /     %li.toggle-topbar.menu-icon
+  /   %a{:href => "#"}
+  /     %span Menu
+  /   %section.top-bar-section
+  /     %ul.left
+  /       %li.item_menu.active
+  /         %a{:href => "index.html"}
+  /           .icon.home
+  /           Inicio
+
+
+
+
 
 

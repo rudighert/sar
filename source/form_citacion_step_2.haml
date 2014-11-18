@@ -1,0 +1,44 @@
+=partial 'partials/menu_logged'
+
+.row
+  =partial 'partials/menu_forms', locals: {select: "Citación"}
+
+
+
+%form{name: "form_ditacion_step_2", action: "#", method: "post"}
+
+  .row.forms
+    .small-3.columns
+      .box_gray
+        .item
+          Estado:
+          %span.green Activo
+      .box_gray
+        .item Nombre: Nombre Usuario
+        .item Delito: Robo con intimidación
+      .box_gray
+        .item Tiempo de intervención: 11 días
+        .item Citaciones realizadas: 3
+        .item Citaciones cumplidas: 4
+      .box_gray
+        .item Fecha de ingreso: 17/11/2012
+
+    .small-9.columns
+      .subtitle Detalle de Citación
+      .item
+        Fecha de citacion:
+        %span.blue 28/10/2014
+      .item
+        Seleccione hora:
+        %span.blue 17:00 hrs
+      .item
+        %input{checked: true, name: "asistire", type: "radio", :value => "si"}
+        %label Asiste
+        %input{checked: true, name: "asistire", type: "radio", :value => "no"}
+        %label No asiste
+      .item
+        %textarea{rows: 6, name: "observaciones"} Observaciones de la citación
+
+
+
+  =partial 'partials/action_buttons'
