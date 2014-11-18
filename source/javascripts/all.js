@@ -5,4 +5,11 @@
 
 $(document).ready(function(){
   $(document).foundation();
+
+  $('body').on('click', 'table .sort', function(){
+    $(this).toggleClass('desc')
+  })
+
+  $( "input.calendar" ).datepicker();
 })
+

@@ -4,7 +4,7 @@
     %meta{:charset => "utf-8"}
       %meta{:content => "IE=edge,chrome=1", "http-equiv" => "X-UA-Compatible"}
         %title="SAR"
-        = stylesheet_link_tag "normalize", "general", "style", "foundation", "font"
+        = stylesheet_link_tag "normalize", "general", "style", "foundation", "font", "jQuery-ui"
         = javascript_include_tag  "all"
 
   %body{:class => page_classes}
@@ -16,6 +16,7 @@
             .logo.corp=image_tag 'icons/logo_corp.png'
 
 
-      = yield
+      #menu_logged=partial 'partials/menu_logged'
+      .main= yield
     %footer
       .line_footer

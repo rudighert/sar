@@ -1,7 +1,4 @@
-=partial 'partials/menu_logged'
-
-.row
-  =partial 'partials/menu_forms', locals: {select: "Citación"}
+=partial 'partials/menu_forms', locals: {select: "Intervención Especial"}
 
 
 %section#intevencion_especial
@@ -22,7 +19,7 @@
 
       .small-8.columns
         .row.box_items.blue
-          .small-12.columns.item Citaciones:
+          .small-12.columns.item Intervención Psicológica:
         .row.box_items.dark_gray
           .small-8.columns Objetivos
           .small-4.columns
@@ -45,7 +42,7 @@
           .small-3.columns
             %input{type: "checkbox", name: "informe_psicologico", value: true, checked: false}
 
-        .row
-          .small-12.columns.to_right
-            %button Adjuntar Archivos
+      .row
+        .small-12.columns.to_right
+          %button Adjuntar Archivos
 

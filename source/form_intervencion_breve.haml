@@ -1,11 +1,8 @@
-=partial 'partials/menu_logged'
-
-.row
-  =partial 'partials/menu_forms', locals: {select: "Egreso"}
+=partial 'partials/menu_forms', locals: {select: "Intervanción Breve"}
 
 .row
   .small-12.columns
-    .title_box_blue FORMULATIO DE INGRESO A INTERVENCION BREVE
+    .title_box_blue FORMULARIO DE INGRESO A INTERVENCION BREVE
 
 
 .row.forms
@@ -112,6 +109,7 @@
 
     / Line Items
     .small-6.large-6.columns
+
       %label Delitos Catálogo
     .small-6.large-6.columns
       %label Otros Delitos
@@ -120,6 +118,7 @@
     .small-6.large-6.columns
       %label VIF:
     .small-6.large-6.columns
+      %label Victima:
       %input{checked: true, name: "otros_delitos_directa", type: "checkbox", :value => true}
       %label Directa
       %input{checked: false, name: "otros_delitos_indirecta", type: "checkbox", :value => true}
@@ -149,19 +148,14 @@
             %th{:width => "20%"} No Logrados
 
         %tbody
-          %tr
-            %td ...
-            %td
-            %td
-            %td
-          %tr
-            %td ...
-            %td
-            %td
-            %td
-          %tr
-            %td ...
-            %td
-            %td
-            %td
+          -(1..3).each do |i|
+            %tr
+              %td ...
+              %td
+                .icons.icons-caritas_logrado
+              %td
+                .icons.icons-caritas_parcialmente
+              %td
+                .icons.icons-caritas_nologrado
+
   =partial 'partials/action_buttons'

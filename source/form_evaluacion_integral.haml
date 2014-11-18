@@ -1,11 +1,8 @@
-=partial 'partials/menu_logged'
-
-.row
-  =partial 'partials/menu_forms', locals: {select: "Valoración Integral"}
+=partial 'partials/menu_forms', locals: {select: "Valoración Integral"}
 
 .row
   .small-12.columns
-    .title_box_blue FORMULATIO DE EVALUACIÓN INTEGRAL (Valorización)
+    .title_box_blue FORMULARIO DE EVALUACIÓN INTEGRAL (Valorización)
 
   .small-12.columns
     .title_box_gray
@@ -21,13 +18,13 @@
     / Line Items
     .small-12.large-12.columns
       %input{checked: true, name: "tipo_familia", type: "radio", :value => "mono_parental"}
-      %label Mono Paramental
+      %label Mono Parental
     .small-12.large-12.columns
       %input{checked: false, name: "tipo_familia", type: "radio", :value => "biparental"}
       %label Biparental
     .small-12.large-12.columns
       %input{checked: false, name: "tipo_familia", type: "radio", :value => "multiparamental"}
-      %label Multiparamental
+      %label Multiparental
     .small-12.large-12.columns
       %input{checked: false, name: "tipo_familia", type: "radio", :value => "reensamblada"}
       %label Reensamblada

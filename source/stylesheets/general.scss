@@ -3,7 +3,7 @@
 
 
 h1, h2, h3, h4, label, div, button, table, th{
-  font-family:  "Gob", "Helvetica Neue", Helvetica, 'lucida grande', tahoma, verdana, arial, sans-serif;
+  font-family:  "Gob", "Helvetica Neue", Helvetica, 'lucida grande', tahoma, verdana, arial, sans-serif!important;
 }
 
 .va{
@@ -41,17 +41,7 @@ $height_footer: 5px;
     display: block;
   }
 }
-footer{
-  position: static;
-  width: 100%;
-  bottom: 0;
-  .line_footer{
-    width: 200px;
-    margin: 0 auto;
-    background-color: blue;
-    height: 5px;
-  }
-}
+
 
 
 
