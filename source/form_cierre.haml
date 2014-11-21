@@ -1,85 +1,85 @@
-=partial 'partials/menu_forms', locals: {select: "Cerrar"}
+=partial 'partials/menu_forms', locals: {select: "Cierre/Egreso"}
+.content_form
+  .row
+    .small-12.columns
+      .title_box_blue FORMULARIO DE CIERRE
 
-.row
-  .small-12.columns
-    .title_box_blue FORMULARIO DE CIERRE
+  .row.forms.box_gray
 
-.row.forms.box_gray
+    .small-6.columns
+      .text_info
+        %span.black Fecha de Cierre:
+        %span.blue 09/03/2014
+      .text_info
+        %span.black Nombre y Apellido:
+        %span.blue Nombre y Apellido
+      .text_info
+        %span.black Timpo de intervención en el CAVD:
+        %span.blue 6 meses
 
-  .small-6.columns
-    .text_info
-      %span.black Fecha de Cierre:
-      %span.blue 09/03/2014
-    .text_info
-      %span.black Nombre y Apellido:
-      %span.blue Nombre y Apellido
-    .text_info
-      %span.black Timpo de intervención en el CAVD:
-      %span.blue 6 meses
+    .small-6.columns
+      .text_info
+        %span.black Nº expediente:
+        %span.blue 38235468
 
-  .small-6.columns
-    .text_info
-      %span.black Nº expediente:
-      %span.blue 38235468
+  %form{name: "form_cierre", action: "#", method: "post"}
+    .row.forms
+      .subtitle Intervenciones realizadas:
 
-%form{name: "form_cierre", action: "#", method: "post"}
-  .row.forms
-    .subtitle Intervenciones realizadas:
+      / Line Items
+      .small-12.large-12.columns
+        %table.general_table.table_asistencia
+          %thead
+            %tr
+              %th{:width => "40%"} Tipo de Intervención (incluir asociadas al ingreso)
+              %th{:width => "30%"} Nº de Asistencias
+              %th{:width => "30%"} % de Asistencias (Nº sw asistencias v/s Nº de inasistencias)
 
-    / Line Items
-    .small-12.large-12.columns
-      %table.general_table.table_asistencia
-        %thead
-          %tr
-            %th{:width => "40%"} Tipo de Intervención (incluir asociadas al ingreso)
-            %th{:width => "30%"} Nº de Asistencias
-            %th{:width => "30%"} % de Asistencias (Nº sw asistencias v/s Nº de inasistencias)
+          %tbody
+            %tr
+              %td Intervención Psicológica
+              %td
+              %td
+            %tr
+              %td Intervención Legal
+              %td
+              %td
+            %tr
+              %td Intervención Social
+              %td
+              %td
+            %tr
+              %td Intervención Psiquiátrica
+              %td
+              %td
+            %tr
+              %td Total
+              %td
+              %td
 
-        %tbody
-          %tr
-            %td Intervención Psicológica
-            %td
-            %td
-          %tr
-            %td Intervención Legal
-            %td
-            %td
-          %tr
-            %td Intervención Social
-            %td
-            %td
-          %tr
-            %td Intervención Psiquiátrica
-            %td
-            %td
-          %tr
-            %td Total
-            %td
-            %td
+    .row.forms
+      .subtitle Cierre:
+      / Line Items
+      .small-12.large-12.columns
+        %input{checked: true, name: "causa_tribunales_no_adscrito", type: "checkbox", :value => true}
+        %label No Adscrito
+      .small-12.large-12.columns
+        %input{checked: false, name: "causa_tribunales_no_asiste", type: "checkbox", :value => true}
+        %label No Asiste
+      .small-12.large-12.columns
+        %input{checked: false, name: "causa_tribunales_desercion", type: "checkbox", :value => true}
+        %label Deserción
+      .small-12.large-12.columns
+        %input{checked: false, name: "causa_tribunales_cierre_administrativo", type: "checkbox", :value => true}
+        %label Cierre Administrativo
+      .small-12.large-12.columns
+        %input{checked: false, name: "causa_tribunales_desercion", type: "checkbox", :value => true}
+        %label Deserción
 
-  .row.forms
-    .subtitle Cierre:
-    / Line Items
-    .small-12.large-12.columns
-      %input{checked: true, name: "causa_tribunales_no_adscrito", type: "checkbox", :value => true}
-      %label No Adscrito
-    .small-12.large-12.columns
-      %input{checked: false, name: "causa_tribunales_no_asiste", type: "checkbox", :value => true}
-      %label No Asiste
-    .small-12.large-12.columns
-      %input{checked: false, name: "causa_tribunales_desercion", type: "checkbox", :value => true}
-      %label Deserción
-    .small-12.large-12.columns
-      %input{checked: false, name: "causa_tribunales_cierre_administrativo", type: "checkbox", :value => true}
-      %label Cierre Administrativo
-    .small-12.large-12.columns
-      %input{checked: false, name: "causa_tribunales_desercion", type: "checkbox", :value => true}
-      %label Deserción
+    .row.forms
+      .subtitle Resumen
 
-  .row.forms
-    .subtitle Resumen
+      .small-12.large-12.columns
+        %textarea{rows: 6, name: "text_cierre"} text...
 
-    .small-12.large-12.columns
-      %textarea{rows: 6, name: "text_cierre"} text...
-
-  =partial 'partials/action_buttons'
+    =partial 'partials/action_buttons'

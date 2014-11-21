@@ -1,161 +1,158 @@
 =partial 'partials/menu_forms', locals: {select: "Intervanción Breve"}
-
-.row
-  .small-12.columns
-    .title_box_blue FORMULARIO DE INGRESO A INTERVENCION BREVE
-
-
-.row.forms
-  .subtitle Datos Personales
-
-.row.forms.box_gray
-  .small-6.columns
-    .text_info
-      %span.black Fecha:
-      %span.blue 12/12/1912
-    .text_info
-      %span.black Nombres y apellidos:
-      %span.blue Nombres y apellidos
-    .text_info
-      .row
-        .small-2.columns
-          %label Sexo:
-        .small-5.columns
-          %input{checked: true, name: "sexo", type: "radio", :value => "hombre"}
-          %label Hombre
-        .small-5.columns
-          %input{checked: false, name: "sexo", type: "radio", :value => "mujer"}
-          %label Mujer
-    .text_info
-      %span.black Región:
-      %span.blue Metropolitana
-
-    .text_info
-      %span.black Teléfono Fijo:
-      %span.blue 2131234432
-
-    .text_info
-      %span.black Mail:
-      %span.blue Mail@mail.com
-
-
-  .small-6.columns
-    .text_info
-      %span.black Nº expediente:
-      %span.blue 1312432
-    .text_info
-      %span.black Nacionalidad
-      %span.blue Chilena
-    .text_info
-      %span.black Edad:
-      %span.blue 19 años
-    .text_info
-      %span.black Comuna:
-      %span.blue Santiago
-    .text_info
-      %span.black Teléfono Móvil:
-      %span.blue 1312432
-
-
-%form{name: "form_intervencion_breve", action: "#", method: "post"}
-  .row.forms
-    .subtitle Derivado o referido:
-
-    / Line Items
-    .small-12.large-6.columns
-      %input{checked: true, name: "derivado", type: "radio", :value => "soi"}
-      %label SOI (Línea 600/Carta SOI)
-    .small-12.large-6.columns
-      %input{checked: false, name: "derivado", type: "radio", :value => "tercer_contacto_soi"}
-      %label Tercer Contacto SOI
-
-    / Line Items
-    .small-12.large-6.columns
-      %input{checked: false, name: "derivado", type: "radio", :value => "ministerio_publico"}
-      %label Ministerio Público
-    .small-12.large-6.columns
-      %input{checked: false, name: "derivado", type: "radio", :value => "apoyo_victimas"}
-      %label Apoyo a Victimas 24 horas
-
-
-    / Line Items
-    .small-12.large-6.columns
-      %input{checked: false, name: "derivado", type: "radio", :value => "demanda_espontanea"}
-      %label Demanda Espontánea
-    .small-12.large-6.columns
-      %input{checked: false, name: "derivado", type: "radio", :value => "otros_indicar"}
-      %label Otros (indicar)
-
-    / Line Items
-    .small-12.large-6.columns
-      %input{checked: false, name: "derivado", type: "radio", :value => "conmocion_publica"}
-      %label Conmoción Pública
-    .small-12.large-6.columns
-      %input{checked: false, name: "derivado", type: "radio", :value => "circuito_femicidio"}
-      %label Circuito de Femicidio
-
-    / Line Items
-    .small-12.large-6.columns
-      %input{checked: false, name: "derivado", type: "radio", :value => "interna"}
-      %label Interna
-    .small-12.large-6.columns
-      %input{checked: false, name: "derivado", type: "radio", :value => "otro"}
-      %label Otro
-      %input{type: "text", name: "otro_text"}
+.content_form
+  .row
+    .small-12.columns
+      .title_box_blue FORMULARIO DE INGRESO A INTERVENCION BREVE
 
 
   .row.forms
-    .subtitle Motivo de la Consulta:
+    .subtitle Datos Personales
 
-    / Line Items
-    .small-6.large-6.columns
+  .row.forms.box_gray
+    .small-6.columns
+      .text_info
+        %span.black Fecha:
+        %span.blue 12/12/1912
+      .text_info
+        %span.black Nombres y apellidos:
+        %span.blue Nombres y apellidos
+      .text_info
+        .row
+          .small-2.columns
+            %label Sexo:
+          .small-5.columns
+            %input{checked: true, name: "sexo", type: "radio", :value => "hombre"}
+            %label Hombre
+          .small-5.columns
+            %input{checked: false, name: "sexo", type: "radio", :value => "mujer"}
+            %label Mujer
+      .text_info
+        %span.black Región:
+        %span.blue Metropolitana
 
-      %label Delitos Catálogo
-    .small-6.large-6.columns
-      %label Otros Delitos
+      .text_info
+        %span.black Teléfono Fijo:
+        %span.blue 2131234432
 
-    / Line Items
-    .small-6.large-6.columns
-      %label VIF:
-    .small-6.large-6.columns
-      %label Victima:
-      %input{checked: true, name: "otros_delitos_directa", type: "checkbox", :value => true}
-      %label Directa
-      %input{checked: false, name: "otros_delitos_indirecta", type: "checkbox", :value => true}
-      %label Indirecta
-
-    .small-12.large-12.columns
-      %label Breve Relato:
-      %textarea{rows: 6, name: "breve_relato"} text...
-
-    .small-12.large-12.columns
-      %label Demanda o necesidad:
-      %textarea{rows: 6, name: "demanda_necesidad"} text...
+      .text_info
+        %span.black Mail:
+        %span.blue Mail@mail.com
 
 
+    .small-6.columns
+      .text_info
+        %span.black Nº expediente:
+        %span.blue 1312432
+      .text_info
+        %span.black Nacionalidad
+        %span.blue Chilena
+      .text_info
+        %span.black Edad:
+        %span.blue 19 años
+      .text_info
+        %span.black Comuna:
+        %span.blue Santiago
+      .text_info
+        %span.black Teléfono Móvil:
+        %span.blue 1312432
 
-  .row.forms
-    .subtitle Intervención:
 
-    / Line Items
-    .small-12.large-12.columns
-      %table.general_table.table_asistencia
-        %thead
-          %tr
-            %th{:width => "40%"} Objetivos:
-            %th{:width => "20%"} Logrados
-            %th{:width => "20%"} Parcialmente Logrados
-            %th{:width => "20%"} No Logrados
+  %form{name: "form_intervencion_breve", action: "#", method: "post"}
+    .row.forms
+      .subtitle Derivado o referido:
 
-        %tbody
-          -(1..3).each do |i|
+      / Line Items
+      .small-12.large-6.columns
+        %input{checked: true, name: "derivado", type: "radio", :value => "soi"}
+        %label SOI (Línea 600/Carta SOI)
+      .small-12.large-6.columns
+        %input{checked: false, name: "derivado", type: "radio", :value => "tercer_contacto_soi"}
+        %label Tercer Contacto SOI
+
+      / Line Items
+      .small-12.large-6.columns
+        %input{checked: false, name: "derivado", type: "radio", :value => "ministerio_publico"}
+        %label Ministerio Público
+      .small-12.large-6.columns
+        %input{checked: false, name: "derivado", type: "radio", :value => "apoyo_victimas"}
+        %label Apoyo a Victimas 24 horas
+
+
+      / Line Items
+      .small-12.large-6.columns
+        %input{checked: false, name: "derivado", type: "radio", :value => "demanda_espontanea"}
+        %label Demanda Espontánea
+      .small-12.large-6.columns
+        %input{checked: false, name: "derivado", type: "radio", :value => "otros_indicar"}
+        %label Otros (indicar)
+
+      / Line Items
+      .small-12.large-6.columns
+        %input{checked: false, name: "derivado", type: "radio", :value => "conmocion_publica"}
+        %label Conmoción Pública
+      .small-12.large-6.columns
+        %input{checked: false, name: "derivado", type: "radio", :value => "circuito_femicidio"}
+        %label Circuito de Femicidio
+
+      / Line Items
+      .small-12.large-6.columns
+        %input{checked: false, name: "derivado", type: "radio", :value => "interna"}
+        %label Interna
+      .small-12.large-6.columns
+        %input{checked: false, name: "derivado", type: "radio", :value => "otro"}
+        %label Otro
+        %input{type: "text", name: "otro_text"}
+
+
+    .row.forms
+      .subtitle Motivo de la Consulta:
+
+      / Line Items
+      .small-6.large-6.columns
+
+        %label Delitos Catálogo
+      .small-6.large-6.columns
+        %label Otros Delitos
+
+      / Line Items
+      .small-6.large-6.columns
+        %label VIF:
+      .small-6.large-6.columns
+        %label Victima:
+        %input{checked: true, name: "otros_delitos_directa", type: "checkbox", :value => true}
+        %label Directa
+        %input{checked: false, name: "otros_delitos_indirecta", type: "checkbox", :value => true}
+        %label Indirecta
+
+      .small-12.large-12.columns
+        %label Breve Relato:
+        %textarea{rows: 6, name: "breve_relato"} text...
+
+      .small-12.large-12.columns
+        %label Demanda o necesidad:
+        %textarea{rows: 6, name: "demanda_necesidad"} text...
+
+
+
+    .row.forms
+      .subtitle Intervención:
+
+      / Line Items
+      .small-12.large-12.columns
+        %table.general_table.table_asistencia
+          %thead
             %tr
-              %td ...
-              %td
-                .icons.icons-caritas_logrado
-              %td
-                .icons.icons-caritas_parcialmente
-              %td
-                .icons.icons-caritas_nologrado
+              %th{:width => "40%"} Objetivos:
+              %th{:width => "20%"} Logrados
+              %th{:width => "20%"} Parcialmente Logrados
+              %th{:width => "20%"} No Logrados
 
-  =partial 'partials/action_buttons'
+          %tbody
+            -(1..3).each do |i|
+              %tr
+                %td ...
+                %td
+                %td
+                %td
+
+    =partial 'partials/action_buttons'

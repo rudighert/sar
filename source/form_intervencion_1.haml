@@ -1,0 +1,31 @@
+%section#intevencion_especial
+  %form{name: "form_intervencion_2", action: "#", method: "post"}
+
+    .row.forms
+      .small-12.columns
+        .row.box_items.dark_gray
+          .small-8.columns Objetivos
+          .small-4.columns
+            %a{href: "#"}
+              Agregar Objetivos
+        .row.box_items
+          .small-12.columns Titulo Objetivo
+
+
+        .row.box_items.dark_gray
+          .small-9.columns Objetivos
+          .small-3.columns Visado
+        .row.box_items
+          .small-9.columns Informe psicológico de la víctima
+          .small-3.columns
+            %input{type: "checkbox", name: "informe_psicologico", value: true, checked: true}
+
+        .row.box_items
+          .small-9.columns Informe técnico social
+          .small-3.columns
+            %input{type: "checkbox", name: "informe_psicologico", value: true, checked: false}
+
+      .row
+        .small-12.columns.to_right
+          %button Adjuntar Archivos
+

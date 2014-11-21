@@ -11,5 +11,11 @@ $(document).ready(function(){
   })
 
   $( "input.calendar" ).datepicker();
+
+  $('body').on('click', '.block_input_icon', function(){
+    $input = $(this).find('.calendar')
+    $input.datepicker('show');
+  })
+
 })
 

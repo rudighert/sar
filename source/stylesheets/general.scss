@@ -33,14 +33,7 @@ h1, h2, h3, h4, label, div, button, table, th{
 }
 
 
-$height_footer: 5px;
-#wrapper{
-  min-height: 100%;
-  &:after{
-    content: "";
-    display: block;
-  }
-}
+
 
 
 

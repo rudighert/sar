@@ -11,6 +11,22 @@ $icons-sprite-dimensions: true;
 @import "icons/*.png";
 @include all-icons-sprites;
 
+body{
+  &.index, &.login{
+    .main{
+      border: none;
+    }
+  }
+}
+
+#wrapper{
+  min-height: 100%;
+  padding-top: 170px;
+  &:after{
+    content: "";
+    display: block;
+  }
+}
 
 .title_box_blue, .title_box_gray{
   font-size: 14px;
@@ -49,6 +65,12 @@ $icons-sprite-dimensions: true;
   color: $text_blue;
   padding: 15px;
   white-space: nowrap;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+
 
   h1{
     font-size: 20px;
@@ -73,7 +95,11 @@ $icons-sprite-dimensions: true;
 #menu_logged{
   background-color: $bg_blue;
   color: white;
-  margin-bottom: 50px;
+  position: fixed;
+  top: 106px;
+  width: 100%;
+  left: 0;
+  z-index: 1;
   .item_menu{
     .icon{
       @extend .icons-sprite;
@@ -165,31 +191,43 @@ section#login{
     @include inline-block;
   }
 }
-
+section.menu_form{
+  max-width: 1015px;
+  margin: 0 auto;
+  position: absolute;
+  background-color: white;
+  z-index: 1;
+}
 #menu_form{
   font-size: 0;
   background-color: $gray_box;
   width: 100%;
   display: table;
   margin: 0;
-  margin-bottom: 40px;
   li{
-    font-size: 12px;
+    font-size: 14px;
     margin: 0;
     width: 11%;
     display: inline-block;
     vertical-align: middle;
     color: $text_blue;
     display: table-cell;
-    padding: 0 10px;
     text-align: center;
     border-right: 3px solid white;
     &.select{
       color: white;
       background-color: $bg_blue;
+      a{
+        color: white;
+      }
     }
     &:last-child{
       border-right: none;
+    }
+    .link{
+      width: 100%;
+      padding: 0 10px;
+      height: 100%;
     }
   }
 }
@@ -262,6 +300,7 @@ section#login{
   }
   .calendar{
     padding-left: 50px;
+    cursor: pointer;
   }
 
   .hour{
@@ -373,6 +412,7 @@ section#login{
 }
 
 #cases{
+  padding-top: 30px;
   label.filter{
     color: $text_blue;
   }
@@ -383,10 +423,12 @@ section#login{
 }
 
 footer{
-  position: static;
+  position: fixed;
+  background-color: white;
   width: 100%;
   bottom: 0;
-  text-align: center;
+  text-align: right;
+  margin: 0 auto;
   .line_footer{
     margin: 0 auto;
     @extend .icons-logo_gob;
@@ -394,10 +436,14 @@ footer{
 }
 
 .main{
-  margin: 0 100px;
-  border: 2px solid $gray_box;
-}
-section.menu_form{
-  max-width: 1015px;
   margin: 0 auto;
+  border: 2px solid $gray_box;
+  max-width: 1018px;
+  max-height: 480px;
+  overflow: scroll;
+  position: relative;
+}
+
+.content_form{
+  padding-top: 50px;
 }

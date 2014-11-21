@@ -1,41 +1,41 @@
 =partial 'partials/menu_forms', locals: {select: "Citación"}
 
+.content_form
+
+  %form{name: "form_ditacion_step_1", action: "#", method: "post"}
+
+    .row.forms
+      .small-3.columns
+        .box_gray
+          .item
+            Estado:
+            %span.green Activo
+        .box_gray
+          .item Nombre: Nombre Usuario
+          .item Delito: Robo con intimidación
+        .box_gray
+          .item Tiempo de intervención: 11 días
+          .item Citaciones realizadas: 3
+          .item Citaciones cumplidas: 4
+        .box_gray
+          .item Fecha de ingreso: 17/11/2012
+
+      .small-9.columns
+        .row.border_gray
+          .small-12.columns
+            %label Seleccione fecha:
+            .block_input_icon
+              .icon.icons-sprite.icons-date_az
+              %input.calendar{type: "text", name: "fecha_delito"}
 
 
-%form{name: "form_ditacion_step_1", action: "#", method: "post"}
-
-  .row.forms
-    .small-3.columns
-      .box_gray
-        .item
-          Estado:
-          %span.green Activo
-      .box_gray
-        .item Nombre: Nombre Usuario
-        .item Delito: Robo con intimidación
-      .box_gray
-        .item Tiempo de intervención: 11 días
-        .item Citaciones realizadas: 3
-        .item Citaciones cumplidas: 4
-      .box_gray
-        .item Fecha de ingreso: 17/11/2012
-
-    .small-9.columns
-      .row.border_gray
-        .small-12.columns
-          %label Seleccione fecha:
-          .block_input_icon
-            .icon.icons-sprite.icons-date_az
-            %input.calendar{type: "text", name: "fecha_delito"}
-
-
-        .small-12.columns
-          %label Seleccione hora:
-          .block_input_icon
-            .icon.icons-sprite.icons-hora
-            %input.hour{type: "text", name: "fecha_delito"}
+          .small-12.columns
+            %label Seleccione hora:
+            .block_input_icon
+              .icon.icons-sprite.icons-hora
+              %input.hour{type: "text", name: "fecha_delito"}
 
 
 
 
-  =partial 'partials/action_buttons'
+    =partial 'partials/action_buttons'

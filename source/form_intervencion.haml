@@ -1,6 +1,7 @@
 =partial 'partials/menu_forms', locals: {select: "Intervención Especial"}
 
-.row
+.content_form
+  .row
   .small-12.columns
     .title_box_blue FORMULARIO INTERVENCION
 %form{name: "form_intervencion", action: "#", method: "post"}
@@ -84,3 +85,35 @@
       %input{checked: false, name: "visado", type: "radio", :value => "no"}
       %label No
   =partial 'partials/action_buttons'
+
+  .row.forms
+    .small-4.columns
+      .box_gray
+        .item Fecha: 17/01/2014
+        .item Nombre: Nombre Usuario
+        .item Rut/Pasaporte: 11.111.111-1
+        .item Nacionalidad: Chileno
+        .item Dirección:
+        .item Comuna:
+        .item Ocupación:
+        .item Delito: Robo con intimidación
+        .item Ingreso CAVD:
+
+    .small-8.columns
+      #accordion
+        .box_items.blue Inervención Psicológica
+        %div=partial 'form_intervencion_1'
+        .box_items.blue  Intervención Psiquiátrica
+        %div=partial 'form_intervencion_2'
+        .box_items.blue  Intervención Social
+        %div=partial 'form_intervencion_3'
+        .box_items.blue  Intervención Jurídica
+        %div=partial 'form_intervencion_4'
+
+:javascript
+  $(document).ready(function(){
+    $( "#accordion" ).accordion({
+      heightStyle: "content",
+      collapsible: true
+    });
+  })

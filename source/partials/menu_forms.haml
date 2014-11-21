@@ -1,7 +1,28 @@
--menu = ["SAR", "Citación", "Detalle del Caso", "Intervanción Breve", "Valoración Integral", "Cerrar", "Intervención Especial", "Derivar", "Egreso"]
-
 -select = select.nil? ? "SAR":select
 %section.menu_form
   %ul#menu_form
-    -menu.each do |m|
-      %li{class: m==select ? "select" : ''}=m
+    %li{class: select=='cases' ? 'select' : ''}
+      %a{href: 'cases.html'}
+        .link Inicio
+    %li{class: select=='SAR' ? 'select' : ''}
+      %a{href: 'form_sar.html'}
+        .link SAR
+    %li{class: select=='Citación' ? 'select' : ''}
+      %a{href: 'form_citacion_step_1.html'}
+        .link Citaciones
+    %li{class: select=='Valoración Integral' ? 'select' : ''}
+      %a{href: 'form_evaluacion_integral.html'}
+        .link Valoración Integral
+    %li{class: select=='Detalle del Caso' ? 'select' : ''}
+      %a{href: 'form_detalle_caso.html'}
+        .link Detalle del Caso
+    %li{class: select=='Intervanción Breve' ? 'select' : ''}
+      %a{href: 'form_intervencion_breve.html'}
+        .link Intervención Breve
+    %li{class: select=='Intervención Especial' ? 'select' : ''}
+      %a{href: 'form_intervencion.html'}
+        .link Intervención Especial
+    %li{class: select=='Finalización SAR' ? 'select' : ''}
+      %a{href: 'form_cierre.html'}
+        .link Cierre/Egreso
+

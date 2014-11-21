@@ -1,94 +1,94 @@
 =partial 'partials/menu_forms', locals: {select: "Egreso"}
-
-.row
-  .small-12.columns
-    .title_box_blue FORMULARIO DE EGRESO
-
-
-.row.forms.box_gray
-  .small-6.columns
-    .text_info
-      %span.black Fecha de egreso:
-      %span.blue 12/12/1912
-    .text_info
-      %span.black Nombres y apellidos:
-      %span.blue Nombres y apellidos
-    .text_info
-      %span.black Tiempo de intervencion en el CAVD:
-      %span.blue 6 meses
+.content_form
+  .row
+    .small-12.columns
+      .title_box_blue FORMULARIO DE EGRESO
 
 
-  .small-6.columns
-    .text_info
-      %span.black Nº expediente:
-      %span.blue 1312432
+  .row.forms.box_gray
+    .small-6.columns
+      .text_info
+        %span.black Fecha de egreso:
+        %span.blue 12/12/1912
+      .text_info
+        %span.black Nombres y apellidos:
+        %span.blue Nombres y apellidos
+      .text_info
+        %span.black Tiempo de intervencion en el CAVD:
+        %span.blue 6 meses
 
-%form{name: "form_egreso", action: "#", method: "post"}
-  .row.forms
-    .subtitle Intervenciones realizadas:
 
-    / Line Items
-    .small-12.large-12.columns
-      %table.general_table.table_asistencia
-        %thead
-          %tr
-            %th{:width => "40%"} Tipo de Intervención (incluir asociadas al ingreso)
-            %th{:width => "30%"} Nº de Asistencias
-            %th{:width => "30%"} % de Asistencias (Nº sw asistencias v/s Nº de inasistencias)
+    .small-6.columns
+      .text_info
+        %span.black Nº expediente:
+        %span.blue 1312432
 
-        %tbody
-          %tr
-            %td Intervención Psicológica
-            %td
-            %td
-          %tr
-            %td Intervención Legal
-            %td
-            %td
-          %tr
-            %td Intervención Social
-            %td
-            %td
-          %tr
-            %td Intervención Psiquiátrica
-            %td
-            %td
-          %tr
-            %td Total
-            %td
-            %td
+  %form{name: "form_egreso", action: "#", method: "post"}
+    .row.forms
+      .subtitle Intervenciones realizadas:
 
-    / Line Items
-  .row.forms
-    .subtitle Egreso
-    .small-12.large-12.columns
-      %label
-      %input{checked: true, name: "egreso_finaliza_pie", type: "checkbox", :value => true}
-      %label Finaliza PIE
-    .small-12.large-12.columns
-      %input{checked: true, name: "egreso_finaliza_ib", type: "checkbox", :value => true}
-      %label Finaliza IB
+      / Line Items
+      .small-12.large-12.columns
+        %table.general_table.table_asistencia
+          %thead
+            %tr
+              %th{:width => "40%"} Tipo de Intervención (incluir asociadas al ingreso)
+              %th{:width => "30%"} Nº de Asistencias
+              %th{:width => "30%"} % de Asistencias (Nº sw asistencias v/s Nº de inasistencias)
 
-    / Line Items
-  .row.forms
-    .subtitle Logro de Objetivo al egreso:
-    .small-12.large-12.columns
-      %label
-      %input{checked: true, name: "logro_egreso_logrado", type: "checkbox", :value => true}
-      %label Objetivos logrados
-      .icons.icons-caritas_logrado
-    .small-12.large-12.columns
-      %input{checked: false, name: "logro_egreso_pacial", type: "checkbox", :value => true}
-      %label Objetivos parcialmente logrados
-      .icons.icons-caritas_parcialmente
-    .small-12.large-12.columns
-      %input{checked: false, name: "logro_egreso_no_logrado", type: "checkbox", :value => true}
-      %label Objetivos no logrados
-      .icons.icons-caritas_nologrado
+          %tbody
+            %tr
+              %td Intervención Psicológica
+              %td
+              %td
+            %tr
+              %td Intervención Legal
+              %td
+              %td
+            %tr
+              %td Intervención Social
+              %td
+              %td
+            %tr
+              %td Intervención Psiquiátrica
+              %td
+              %td
+            %tr
+              %td Total
+              %td
+              %td
 
-  .row.forms
-    .subtitle Resumen del Egreso:
-    .small-12.large-12.columns
-      %textarea{rows: 6, name: "resumen_egreso"} text...
+      / Line Items
+    .row.forms
+      .subtitle Egreso
+      .small-12.large-12.columns
+        %label
+        %input{checked: true, name: "egreso_finaliza_pie", type: "checkbox", :value => true}
+        %label Finaliza PIE
+      .small-12.large-12.columns
+        %input{checked: true, name: "egreso_finaliza_ib", type: "checkbox", :value => true}
+        %label Finaliza IB
 
-  =partial 'partials/action_buttons'
+      / Line Items
+    .row.forms
+      .subtitle Logro de Objetivo al egreso:
+      .small-12.large-12.columns
+        %label
+        %input{checked: true, name: "logro_egreso_logrado", type: "checkbox", :value => true}
+        %label Objetivos logrados
+
+      .small-12.large-12.columns
+        %input{checked: false, name: "logro_egreso_pacial", type: "checkbox", :value => true}
+        %label Objetivos parcialmente logrados
+
+      .small-12.large-12.columns
+        %input{checked: false, name: "logro_egreso_no_logrado", type: "checkbox", :value => true}
+        %label Objetivos no logrados
+
+
+    .row.forms
+      .subtitle Resumen del Egreso:
+      .small-12.large-12.columns
+        %textarea{rows: 6, name: "resumen_egreso"} text...
+
+    =partial 'partials/action_buttons'
